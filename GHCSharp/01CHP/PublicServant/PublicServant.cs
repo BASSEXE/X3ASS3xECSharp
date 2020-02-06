@@ -8,7 +8,7 @@ namespace _publicservant
   public abstract class _PublServ
   {
     public int Pension {get;set;}
-    public abstract void DTPoI;
+    public abstract void DTPoI();
   }
 
 }

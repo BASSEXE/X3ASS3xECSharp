@@ -2,7 +2,7 @@
 //Sets the Name and Age Properties.
 using System;
 
-using namespace _publicservant
+namespace _publicservant
 {
   public interface IPublicServant
   {

@@ -7,8 +7,8 @@ namespace _publicservant
     private bool _hasEmer = false;
 
     public PoliceOfficer (string name, int age) {
-      This.Name = name;
-      This.Age  = age;
+      this.Name = name;
+      this.Age  = age;
     }
 
     //Interface Implementation.
@@ -21,7 +21,7 @@ namespace _publicservant
     }
 
     public override void DTPoI() {
-            GIPC ();
+            GIPc ();
 
       if (this.HEmer)
               TOS();

@@ -21,6 +21,6 @@ namespace _publicservant
 
     private void GIFt() {}
     private void TOS() {}
-    private FDs() {};
+    private void FDs() {}
   }
 }

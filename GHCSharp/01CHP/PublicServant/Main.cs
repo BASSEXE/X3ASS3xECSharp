@@ -7,7 +7,7 @@ namespace  _publicservant
 {
   public class MClass {
     public static void Main (string[] args) {
-      Firefighter firefighter = new FireFighter ("Joe Carrington", 35);
+      FireFighter firefighter = new FireFighter ("Joe Carrington", 35);
       firefighter.Pension = 5000;
 
       PrntNameAge(firefighter); //Prototype for printing Name & age
