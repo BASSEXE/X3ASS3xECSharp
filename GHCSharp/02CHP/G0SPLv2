@@ -15,7 +15,7 @@ using System.IO;
 
 namespace GSPLXSSQLI{
 	class XSSQLI {
-		public static void Main (string args[]){
+		public static void Main (string[] args){
 			string RHOST = args [0];
 			string[] parms = RHOST.Remove (0, RHOST.IndexOf ("?") + 1).Split ('&');
 			//RHOST = url ex. "www.test.com?parm1=value1&parm2=value2"
