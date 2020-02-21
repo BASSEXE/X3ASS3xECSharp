@@ -1,0 +1,55 @@
+//X3A55ExE
+//18022020
+//GOSPEL V2
+//Uses V1 parser and System.net classes to test for xss and sqli
+//
+//
+//
+//
+//
+//
+
+using System;
+using System.Net;
+using System.IO;
+
+namespace GSPLXSSQLI{
+	class XSSQLI {
+		public static void Main (string[] args){
+			string RHOST = args [0];
+			string[] parms = RHOST.Remove (0, RHOST.IndexOf ("?") + 1).Split ('&');
+			//RHOST = url ex. "www.test.com?parm1=value1&parm2=value2"
+			//parms = parmeters parsed with values
+			foreach (string parm in parms){
+				string XSS  = RHOST.Replace(parm, parms + "fd<ssx>");
+				string SQLI = RHOST.Replace(parm, parms + "fd'sa");
+
+				HttpWebRequest REQ = (HttpWebRequest)WebRequest.Create(SQLI);
+		REQ.Method = "GET";
+
+		string sqlres =string.Empty;
+		using  (StreamReader rdr = new
+		  StreamReader(REQ.GetResponse().GetResponseStream())) {
+		  sqlres = rdr.ReadToEnd();
+		}
+
+		REQ = (HttpWebRequest) WebRequest.Create (XSS);
+		REQ.Method = "GET";
+
+		string xssres  = string.Empty;
+		using (StreamReader rdr =  new
+		  StreamReader(REQ.GetResponse().GetResponseStream())) {
+			xssres = rdr.ReadToEnd();
+		  }
+
+		  if (xssres.Contains("<ssx>")) {
+			Console.WriteLine("Possible XSS point found in parameter: " + parm);
+		  }
+
+		  if (sqlres.Contains("error in  your SQL syntax")) {
+			Console.WriteLine("SQL injection point found in parameter: " + parm);
+		  }
+			}
+		}
+	}
+}
