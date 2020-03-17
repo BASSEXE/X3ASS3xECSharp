@@ -1,4 +1,4 @@
-﻿//
+//sqli exploit for badstore VM
 //
 //
 //
