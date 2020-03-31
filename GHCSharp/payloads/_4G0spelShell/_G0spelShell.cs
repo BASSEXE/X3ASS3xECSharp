@@ -53,7 +53,7 @@ namespace GOSPELSHELL
                                 prc.StandardOutput.BaseStream.CopyTo(stream);
                                 prc.WaitForExit();
                             } catch {
-                                string UBAD = "Error running command " + _shell + "\n";
+                                string UBAD = "Hm..Something Isn't right here... " + _shell + "\n";
                                 byte[] errorBytes = Encoding.ASCII.GetBytes(UBAD);
                                 stream.Write(errorBytes, 0, errorBytes.Length);
                             }
