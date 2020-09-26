@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{8D804B35-117F-4F70-A6E0-7DA1DE13DF92}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+    <Files>
+      <File FileName="Program.cs" Line="23" Column="9" />
+      <File FileName="CLASS/DWalk.cs" Line="1" Column="1" />
+      <File FileName="Drv_Enum.cs" Line="1" Column="1" />
+      <File FileName="Fil_Enum.cs" Line="1" Column="1" />
+      <File FileName="Fil_Crypt.cs" Line="1" Column="1" />
+      <File FileName="Motd_Wrtr.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="FR46_LCKR" expanded="True">
+            <Node name="FR46_LCKR" expanded="True">
+              <Node name="CLASS" expanded="True" />
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|anycpu" />
+  <MonoDevelop.Ide.ItemProperties.FR46__LCKR FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
