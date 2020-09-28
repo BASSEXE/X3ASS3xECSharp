@@ -2,11 +2,10 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
       <File FileName="Program.cs" Line="23" Column="9" />
-      <File FileName="CLASS/DWalk.cs" Line="1" Column="1" />
-      <File FileName="Drv_Enum.cs" Line="1" Column="1" />
-      <File FileName="Fil_Enum.cs" Line="1" Column="1" />
-      <File FileName="Fil_Crypt.cs" Line="1" Column="1" />
-      <File FileName="Motd_Wrtr.cs" Line="1" Column="1" />
+      <File FileName="Drv_Enum.cs" />
+      <File FileName="Fil_Enum.cs" />
+      <File FileName="Fil_Crypt.cs" />
+      <File FileName="Motd_Wrtr.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

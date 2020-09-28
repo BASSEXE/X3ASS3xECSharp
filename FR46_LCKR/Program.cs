@@ -9,7 +9,7 @@ namespace FR46_LCKR
     {
         [DllImport("kernel32.dll")] private static extern IntPtr g_CMD();
         [DllImport("user.32.dll")] private static extern bool S_window(IntPtr hWnd, int nCmdshw);
-
+        //public static bool IsDebuggerAttached() => System.Diagnostics.Debugger.IsAttached;
         private const int sw_hde = 0;
         private const int sw_shw = 5;
 
