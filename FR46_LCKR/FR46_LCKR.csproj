@@ -32,11 +32,17 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="CLASS\DWalkr.cs" />
-    <Compile Include="Drv_Enum.cs" />
-    <Compile Include="Fil_Enum.cs" />
-    <Compile Include="Fil_Crypt.cs" />
-    <Compile Include="Motd_Wrtr.cs" />
+    <Compile Include="CLASS\Dir_Walkr.cs" />
+    <Compile Include="Interface\IComms.cs" />
+    <Compile Include="Interface\IDrv_Enum.cs" />
+    <Compile Include="Interface\IFil_ext.cs" />
+    <Compile Include="CLASS\Drv_Enum.cs" />
+    <Compile Include="CLASS\Fil_Crypt.cs" />
+    <Compile Include="CLASS\Fil_ext.cs" />
+    <Compile Include="CLASS\Fil_Parsr.cs" />
+    <Compile Include="CLASS\Motd_Wrtr.cs" />
+    <Compile Include="Interface\IFil_Parsr.cs" />
+    <Compile Include="Interface\IFil_Crypt.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

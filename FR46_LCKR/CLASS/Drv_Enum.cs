@@ -1,7 +1,9 @@
 ﻿using System;
+using System.IO;
+
 namespace FR46_LCKR
 {
-    public class Drv_Enum
+    internal class Drv_Enum
     {
         public Drv_Enum()
         {
