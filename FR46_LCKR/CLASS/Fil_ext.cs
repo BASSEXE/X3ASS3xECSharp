@@ -1,9 +1,9 @@
 ﻿using System;
 namespace FR46_LCKR
 {
-    public class Fil_Enum
+    public class Fil_ext
     {
-        public Fil_Enum()
+        public Fil_ext()
         {
         }
     }
