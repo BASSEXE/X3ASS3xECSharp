@@ -14,7 +14,7 @@ namespace FR46_LCKR.CLASS
         {
             var kP = new AesCryptoServiceProvider
             {
-                KeySize = 192
+                KeySize = 128
             };
             kP.GenerateKey();
 
