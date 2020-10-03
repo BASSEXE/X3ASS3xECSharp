@@ -1,5 +1,4 @@
-﻿using System;
-namespace FR46_LCKR
+﻿namespace FR46_LCKR
     //Encryption provider
 {
     internal interface IFil_Crypt

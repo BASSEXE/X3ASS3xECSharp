@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{8D804B35-117F-4F70-A6E0-7DA1DE13DF92}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="CLASS/xXteaE_Provider.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Interface/IFil_Parsr.cs">
     <Files>
       <File FileName="CLASS/Dir_Walkr.cs" Line="1" Column="1" />
       <File FileName="CLASS/Fil_ext.cs" Line="1" Column="1" />
@@ -7,18 +7,22 @@
       <File FileName="CLASS/Motd_Wrtr.cs" Line="1" Column="1" />
       <File FileName="Properties/AssemblyInfo.cs" Line="26" Column="34" />
       <File FileName="Program.cs" Line="38" Column="31" />
-      <File FileName="Interface/IFil_Crypt.cs" Line="1" Column="1" />
-      <File FileName="CLASS/xXteaE_Provider.cs" Line="1" Column="1" />
+      <File FileName="Interface/IFil_Crypt.cs" Line="8" Column="30" />
+      <File FileName="CLASS/xXteaE_Provider.cs" Line="118" Column="1" />
+      <File FileName="Interface/IComms.cs" Line="1" Column="1" />
+      <File FileName="Interface/IDrv_Enum.cs" Line="1" Column="1" />
+      <File FileName="Interface/IFil_ext.cs" Line="1" Column="1" />
+      <File FileName="Interface/IFil_Parsr.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="FR46_LCKR" expanded="True">
             <Node name="FR46_LCKR" expanded="True">
-              <Node name="CLASS" expanded="True">
-                <Node name="xXteaE_Provider.cs" selected="True" />
+              <Node name="CLASS" expanded="True" />
+              <Node name="Interface" expanded="True">
+                <Node name="IFil_Parsr.cs" selected="True" />
               </Node>
-              <Node name="Interface" expanded="True" />
             </Node>
           </Node>
         </State>

