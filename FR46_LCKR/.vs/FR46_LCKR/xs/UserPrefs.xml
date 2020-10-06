@@ -1,8 +1,13 @@
 ﻿<Properties StartupConfiguration="{8D804B35-117F-4F70-A6E0-7DA1DE13DF92}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="CLASS/xXteaE_Provider.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CLASS/Fil_ext.cs">
     <Files>
-      <File FileName="Interface/IDrv_Enum.cs" Line="1" Column="1" IsPinned="True" />
+      <File FileName="Interface/IDrv_Enum.cs" Line="5" Column="1" IsPinned="True" />
       <File FileName="CLASS/xXteaE_Provider.cs" Line="17" Column="30" />
+      <File FileName="Program.cs" Line="45" Column="43" />
+      <File FileName="CLASS/Fil_Parsr.cs" Line="18" Column="29" />
+      <File FileName="Interface/IFil_Parsr.cs" Line="7" Column="22" />
+      <File FileName="Interface/IFil_ext.cs" Line="1" Column="14" />
+      <File FileName="CLASS/Fil_ext.cs" Line="3" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -10,7 +15,7 @@
           <Node name="FR46_LCKR" expanded="True">
             <Node name="FR46_LCKR" expanded="True">
               <Node name="CLASS" expanded="True">
-                <Node name="xXteaE_Provider.cs" selected="True" />
+                <Node name="Fil_ext.cs" selected="True" />
               </Node>
               <Node name="Interface" expanded="True" />
             </Node>

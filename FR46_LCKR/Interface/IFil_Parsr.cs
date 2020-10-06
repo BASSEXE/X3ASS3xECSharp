@@ -4,6 +4,6 @@ namespace FR46_LCKR
 {
     internal interface IFil_Parsr
     {
-        void Parse_File(string filePath);
+        void Par_File(string fPath);
     }
 }

