@@ -1,10 +1,19 @@
 ﻿using System;
+using System.Linq;
+
 namespace FR46_LCKR
 {
-    public class Fil_ext
+    internal class Fil_ext : IFil_ext
     {
-        public Fil_ext()
+        public string[] TargetFiles { get; } =
+            {
+            ".test"
+        };
+
+        public bool IsTargetFile(string fPath)
         {
+            var fileExtension = System.IO.Path.GetExtension(fPath).ToLower();
+            return TargetFiles.Contains(fileExtension);
         }
     }
 }
