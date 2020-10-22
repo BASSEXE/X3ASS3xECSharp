@@ -1,24 +1,28 @@
 ﻿<Properties StartupConfiguration="{8D804B35-117F-4F70-A6E0-7DA1DE13DF92}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="CLASS/Drv_Enum.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Interface/IComms.cs">
     <Files>
-      <File FileName="Interface/IDrv_Enum.cs" Line="5" Column="1" IsPinned="True" />
-      <File FileName="CLASS/xXteaE_Provider.cs" Line="17" Column="30" />
-      <File FileName="Program.cs" Line="48" Column="54" />
+      <File FileName="Program.cs" Line="74" Column="33" IsPinned="True" />
+      <File FileName="CLASS/xXteaE_Provider.cs" Line="35" Column="74" />
       <File FileName="CLASS/Fil_Parsr.cs" Line="18" Column="29" />
-      <File FileName="Interface/IFil_Parsr.cs" Line="7" Column="22" />
-      <File FileName="Interface/IFil_ext.cs" Line="1" Column="14" />
-      <File FileName="CLASS/Fil_ext.cs" Line="10" Column="15" />
-      <File FileName="CLASS/Drv_Enum.cs" Line="19" Column="1" />
+      <File FileName="CLASS/Drv_Enum.cs" Line="25" Column="15" />
+      <File FileName="Interface/IDrv_Enum.cs" Line="5" Column="1" />
+      <File FileName="Interface/IFil_Parsr.cs" Line="1" Column="1" />
+      <File FileName="Interface/IFil_ext.cs" Line="8" Column="26" />
+      <File FileName="CLASS/Fil_ext.cs" Line="1" Column="1" />
+      <File FileName="CLASS/Dir_Walkr.cs" Line="51" Column="1" />
+      <File FileName="Interface/IFil_Crypt.cs" Line="1" Column="1" />
+      <File FileName="CLASS/Motd_Wrtr.cs" Line="1" Column="1" />
+      <File FileName="Interface/IComms.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="FR46_LCKR" expanded="True">
             <Node name="FR46_LCKR" expanded="True">
-              <Node name="CLASS" expanded="True">
-                <Node name="Drv_Enum.cs" selected="True" />
+              <Node name="CLASS" expanded="True" />
+              <Node name="Interface" expanded="True">
+                <Node name="IComms.cs" selected="True" />
               </Node>
-              <Node name="Interface" expanded="True" />
             </Node>
           </Node>
         </State>
