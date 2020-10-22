@@ -1,9 +1,18 @@
 ﻿<Properties StartupConfiguration="{8D804B35-117F-4F70-A6E0-7DA1DE13DF92}|Default">
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="Interface/IComms.cs">
+=======
+<<<<<<< Updated upstream
+  <MonoDevelop.Ide.Workbench ActiveDocument="CLASS/Drv_Enum.cs">
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="CLASS/Fil_ext.cs">
+>>>>>>> Stashed changes
+>>>>>>> 63ebb43186c1ec0211fd1fc79f35714dbb8aa36c
     <Files>
       <File FileName="Program.cs" Line="74" Column="33" IsPinned="True" />
       <File FileName="CLASS/xXteaE_Provider.cs" Line="35" Column="74" />
       <File FileName="CLASS/Fil_Parsr.cs" Line="18" Column="29" />
+<<<<<<< HEAD
       <File FileName="CLASS/Drv_Enum.cs" Line="25" Column="15" />
       <File FileName="Interface/IDrv_Enum.cs" Line="5" Column="1" />
       <File FileName="Interface/IFil_Parsr.cs" Line="1" Column="1" />
@@ -13,6 +22,19 @@
       <File FileName="Interface/IFil_Crypt.cs" Line="1" Column="1" />
       <File FileName="CLASS/Motd_Wrtr.cs" Line="1" Column="1" />
       <File FileName="Interface/IComms.cs" Line="1" Column="1" />
+=======
+<<<<<<< Updated upstream
+      <File FileName="Interface/IFil_Parsr.cs" Line="7" Column="22" />
+      <File FileName="Interface/IFil_ext.cs" Line="1" Column="14" />
+      <File FileName="CLASS/Fil_ext.cs" Line="10" Column="15" />
+      <File FileName="CLASS/Drv_Enum.cs" Line="19" Column="1" />
+=======
+      <File FileName="Interface/IFil_Parsr.cs" />
+      <File FileName="Interface/IFil_ext.cs" />
+      <File FileName="CLASS/Fil_ext.cs" Line="10" Column="2" />
+      <File FileName="CLASS/Drv_Enum.cs" />
+>>>>>>> Stashed changes
+>>>>>>> 63ebb43186c1ec0211fd1fc79f35714dbb8aa36c
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
