@@ -5,9 +5,11 @@ namespace FR46_LCKR
 {
     internal class Fil_ext : IFil_ext
     {
+        private const string V = ".rtf";
+
         public string[] TargetFiles { get; } =
             {
-            ".test"
+            V
         };
 
         public bool IsTargetFile(string fPath)

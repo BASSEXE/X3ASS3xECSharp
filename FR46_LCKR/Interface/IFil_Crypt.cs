@@ -3,8 +3,8 @@
 {
     internal interface IFil_Crypt
     {
-        byte[] Create_ECrypt_Key();
-        byte[] Get_ECrypt_Key();
-        byte[] ECrypt_Bytes(byte[] fileBytes, byte[] encryptionKey);
+        byte[] CreateEncryptionKey();
+        byte[] GetEncryptionKey();
+        byte[] EncryptBytes(byte[] fileBytes, byte[] encryptionKey);
     }
 }

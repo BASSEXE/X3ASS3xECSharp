@@ -4,3 +4,9 @@
 /Users/ech_0x80/Documents/GitHub/X3ASS3xECSharp/FR46_LCKR/obj/Debug/FR46_LCKR.csproj.CoreCompileInputs.cache
 /Users/ech_0x80/Documents/GitHub/X3ASS3xECSharp/FR46_LCKR/obj/Debug/FR46_LCKR.exe
 /Users/ech_0x80/Documents/GitHub/X3ASS3xECSharp/FR46_LCKR/obj/Debug/FR46_LCKR.pdb
+/Users/elyziahreyes/Documents/GitHub/X3ASS3xECSharp/FR46_LCKR/bin/Debug/FR46_LCKR.exe
+/Users/elyziahreyes/Documents/GitHub/X3ASS3xECSharp/FR46_LCKR/bin/Debug/FR46_LCKR.pdb
+/Users/elyziahreyes/Documents/GitHub/X3ASS3xECSharp/FR46_LCKR/obj/Debug/FR46_LCKR.csproj.CoreCompileInputs.cache
+/Users/elyziahreyes/Documents/GitHub/X3ASS3xECSharp/FR46_LCKR/obj/Debug/FR46_LCKR.exe
+/Users/elyziahreyes/Documents/GitHub/X3ASS3xECSharp/FR46_LCKR/obj/Debug/FR46_LCKR.pdb
+/Users/elyziahreyes/Documents/GitHub/X3ASS3xECSharp/FR46_LCKR/obj/Debug/FR46_LCKR.csprojAssemblyReference.cache
