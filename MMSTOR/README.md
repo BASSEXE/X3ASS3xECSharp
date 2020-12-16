@@ -1,6 +1,10 @@
 # X3ASS3xECSharp | MMSTOR
 
 Mutational GET Request Fuzzer
+## Usage
+`http://exampleurl.com?parameter1=query&parameter2=query`
+`http://172.16.1.129/cgi-bin/badstore.cgi?searchquery=snake+Oil&action=search&x=13&y=19`
+
 
 ## Getting Started
 Download the script, compiled using msc. Run accordingly. 
