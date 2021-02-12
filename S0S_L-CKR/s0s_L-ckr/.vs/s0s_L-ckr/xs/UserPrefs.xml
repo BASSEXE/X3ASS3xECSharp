@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{1022A9B3-9A15-43A9-8A98-B56498C07E47}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Comn.cs">
+    <Files>
+      <File FileName="Program.cs" Line="11" Column="6" />
+      <File FileName="CompIdStrat.cs" Line="36" Column="40" />
+      <File FileName="Comn.cs" Line="2" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="s0s_L-ckr" expanded="True">
+            <Node name="s0s_L-ckr" expanded="True">
+              <Node name="Comn.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.s0s__L-ckr FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

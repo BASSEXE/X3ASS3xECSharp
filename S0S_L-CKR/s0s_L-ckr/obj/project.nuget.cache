@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "rpgwuRTYQiCPvIJde+l0jZQsmJw7CLMubG725kEQmyURz4UYkQ8m9NokuOebhY6G3crtpdN3Kd2O+FQ7lilnnw==",
+  "success": true,
+  "projectFilePath": "/Users/elyziahreyes/Documents/GitHub/X3ASS3xECSharp/S0S_L-CKR/s0s_L-ckr/s0s_L-ckr.csproj",
+  "expectedPackageFiles": [
+    "/Users/elyziahreyes/.nuget/packages/microsoft.netcore.platforms/5.0.0/microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "/Users/elyziahreyes/.nuget/packages/microsoft.win32.registry/5.0.0/microsoft.win32.registry.5.0.0.nupkg.sha512",
+    "/Users/elyziahreyes/.nuget/packages/system.codedom/5.0.0/system.codedom.5.0.0.nupkg.sha512",
+    "/Users/elyziahreyes/.nuget/packages/system.management/5.0.0/system.management.5.0.0.nupkg.sha512",
+    "/Users/elyziahreyes/.nuget/packages/system.security.accesscontrol/5.0.0/system.security.accesscontrol.5.0.0.nupkg.sha512",
+    "/Users/elyziahreyes/.nuget/packages/system.security.principal.windows/5.0.0/system.security.principal.windows.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
