@@ -24,7 +24,7 @@ namespace s0s_L_ckr
             //MB
             "Win32_BaseBoard;Model@Win32_BaseBoard;Manufacturer@Win32_BaseBoard;Name@Win32_BaseBoard;SerialNumber";
 
-        public static StickyFingerPrinter(ref string iD)
+        public static void StickyFingerPrinter(ref string iD)
         {
             StringBuilder stringBuilder = new StringBuilder();
             string[] stats = HARDWARE_INFO.Split('@');

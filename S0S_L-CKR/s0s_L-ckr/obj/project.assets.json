@@ -320,19 +320,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/elyziahreyes/.nuget/packages/": {}
+    "/Users/t0ge/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/elyziahreyes/Documents/GitHub/X3ASS3xECSharp/S0S_L-CKR/s0s_L-ckr/s0s_L-ckr.csproj",
+      "projectUniqueName": "/Users/t0ge/Documents/GitHub/X3ASS3xECSharp/S0S_L-CKR/s0s_L-ckr/s0s_L-ckr.csproj",
       "projectName": "s0s_L-ckr",
-      "projectPath": "/Users/elyziahreyes/Documents/GitHub/X3ASS3xECSharp/S0S_L-CKR/s0s_L-ckr/s0s_L-ckr.csproj",
-      "packagesPath": "/Users/elyziahreyes/.nuget/packages/",
-      "outputPath": "/Users/elyziahreyes/Documents/GitHub/X3ASS3xECSharp/S0S_L-CKR/s0s_L-ckr/obj/",
+      "projectPath": "/Users/t0ge/Documents/GitHub/X3ASS3xECSharp/S0S_L-CKR/s0s_L-ckr/s0s_L-ckr.csproj",
+      "packagesPath": "/Users/t0ge/.nuget/packages/",
+      "outputPath": "/Users/t0ge/Documents/GitHub/X3ASS3xECSharp/S0S_L-CKR/s0s_L-ckr/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/elyziahreyes/.config/NuGet/NuGet.Config"
+        "/Users/t0ge/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -376,7 +376,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.103/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
       }
     }
   }
