@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{10A5FB0D-2262-40D4-A26E-884270BC31FC}|Default">
+  <MonoDevelop.Ide.ItemProperties.PLMK3R PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="PLMK3R/Program.cs">
+    <Files>
+      <File FileName="PLMK3R/Program.cs" Line="109" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="PLMK3R" expanded="True">
+            <Node name="PLMK3R" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
