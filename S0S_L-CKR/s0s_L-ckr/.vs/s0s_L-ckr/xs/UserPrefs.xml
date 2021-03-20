@@ -1,16 +1,17 @@
 ﻿<Properties StartupConfiguration="{1022A9B3-9A15-43A9-8A98-B56498C07E47}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Comn.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ConfigMgr.cs">
     <Files>
-      <File FileName="Program.cs" Line="11" Column="6" />
-      <File FileName="CompIdStrat.cs" />
-      <File FileName="Comn.cs" Line="26" Column="1" />
+      <File FileName="Program.cs" Line="22" Column="19" />
+      <File FileName="CompIdStrat.cs" Line="56" Column="31" />
+      <File FileName="Comn.cs" Line="77" Column="31" />
+      <File FileName="ConfigMgr.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="s0s_L-ckr" expanded="True">
             <Node name="s0s_L-ckr" expanded="True">
-              <Node name="Comn.cs" selected="True" />
+              <Node name="ConfigMgr.cs" selected="True" />
             </Node>
           </Node>
         </State>
