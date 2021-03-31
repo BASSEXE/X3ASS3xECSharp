@@ -1,25 +1,14 @@
 ﻿<Properties StartupConfiguration="{1022A9B3-9A15-43A9-8A98-B56498C07E47}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="CriptoKeyMgr.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CompIdStrat.cs">
     <Files>
       <File FileName="Program.cs" Line="28" Column="44" />
       <File FileName="CompIdStrat.cs" Line="56" Column="31" />
-      <File FileName="Comn.cs" Line="112" Column="6" />
-      <File FileName="ConfigMgr.cs" Line="10" Column="10" />
-      <File FileName="CriptoKeyMgr.cs" Line="2" Column="16" />
+      <File FileName="Comn.cs" />
+      <File FileName="ConfigMgr.cs" />
+      <File FileName="CriptoKeyMgr.cs" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="s0s_L-ckr" expanded="True">
-            <Node name="s0s_L-ckr" expanded="True">
-              <Node name="CriptoKeyMgr.cs" selected="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.s0s__L-ckr FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.s0s__L-ckr PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
