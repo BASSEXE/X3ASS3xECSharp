@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Management;
 using System.Threading.Tasks;
 
 namespace s0s_L_ckr
@@ -73,7 +72,7 @@ namespace s0s_L_ckr
         private static string GetID(string wmiClass, string wmiProp)
         {
             string result = "";
-            using System.Management.ManagementClass managementClass = new System.Management.ManagementClass(wmiClass);
+            System.Management.ManagementClass managementClass = new System.Management.ManagementClass(wmiClass);
             System.Management.ManagementObjectCollection managementObjectCollection = managementClass.GetInstances();
             foreach (System.Management.ManagementObject managementObject in managementObjectCollection)
             {

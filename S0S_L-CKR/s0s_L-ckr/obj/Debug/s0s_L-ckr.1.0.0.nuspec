@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>s0s_L-ckr</id>
+    <version>1.0.0</version>
+    <authors>s0s_L-ckr</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.1">
+        <dependency id="System.Management" version="5.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="/Users/t0ge/Documents/GitHub/X3ASS3xECSharp/S0S_L-CKR/s0s_L-ckr/bin/Debug/netcoreapp3.1/s0s_L-ckr.runtimeconfig.json" target="lib/netcoreapp3.1/s0s_L-ckr.runtimeconfig.json" />
+    <file src="/Users/t0ge/Documents/GitHub/X3ASS3xECSharp/S0S_L-CKR/s0s_L-ckr/bin/Debug/netcoreapp3.1/s0s_L-ckr.dll" target="lib/netcoreapp3.1/s0s_L-ckr.dll" />
+  </files>
+</package>
