@@ -54,7 +54,7 @@ namespace s0s_L_ckr
                 byte c = bt[i];
                 int n, n1, n2;
                 n = (int)c;
-                n1 = (n >> 4) & 15;
+                n1 = n & 15;
                 n2 = (n >> 4) & 15;
                 if (n2 > 9)
                     s += ((char)(n2 - 10 + (int)'A')).ToString();

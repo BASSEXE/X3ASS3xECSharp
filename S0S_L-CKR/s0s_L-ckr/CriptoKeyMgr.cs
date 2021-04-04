@@ -60,7 +60,9 @@ namespace s0s_L_ckr
         {
             // Free resources for prev AES Engine
             if (currAesEng != null)
+            {
                 ((IDisposable)currAesEng).Dispose();
+            }
 
             //Restart AES Engine
             currAesEng = new AesManaged();
@@ -190,7 +192,7 @@ namespace s0s_L_ckr
                 using (FileStream fileStream = File.OpenRead(ConfigMgr.LOCL_PRI_KEY_NAM))
                 {
                     // reading private key into secure string array and into PRIVKEY Variable which is read only
-                    Byte[] unsecArray = new byte[fileStream.Length];
+                    Byte[] unsecArray = new Byte[fileStream.Length];
                     fileStream.Read(unsecArray, 0, unsecArray.Length);
                     String unsecData = ASCIIEncoding.ASCII.GetString(unsecArray);
                     Comn.ClearArray(ref unsecArray);

