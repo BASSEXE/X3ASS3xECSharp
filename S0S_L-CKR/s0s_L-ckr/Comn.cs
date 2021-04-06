@@ -41,7 +41,7 @@ namespace s0s_L_ckr
              }
         }
 
-
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void OpenSecStr(ref String dest, ref SecureString srce)
         {
             //OPEN SECURE STRING METHOD
@@ -100,14 +100,20 @@ namespace s0s_L_ckr
 
         public static bool FileInFil(string fileExt)
         {
+            bool resultValue = true;
             string normExt = fileExt.ToUpper(CultureInfo.CurrentCulture);
-
             foreach (string targetFile in ConfigMgr.TRGT_FILS)
             {
                 if (normExt == targetFile)
-                    return true;
+                {
+                    resultValue = true;
+                }
+                else
+                { 
+                    resultValue = false;
+                }
             }
-            return false;
+            return resultValue;
         }
     }
 }

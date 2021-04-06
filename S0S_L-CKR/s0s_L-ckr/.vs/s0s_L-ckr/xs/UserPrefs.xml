@@ -1,22 +1,23 @@
 ﻿<Properties StartupConfiguration="{1022A9B3-9A15-43A9-8A98-B56498C07E47}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="EncrStr.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RansomMessage.cs">
     <Files>
-      <File FileName="Comn.cs" IsPinned="True" />
-      <File FileName="Program.cs" Line="19" Column="28" />
-      <File FileName="ConfigMgr.cs" />
-      <File FileName="CriptoKeyMgr.cs" Line="195" Column="69" />
-      <File FileName="FileMgr.cs" Line="1" Column="1" />
-      <File FileName="CriptoFilMgr.cs" Line="1" Column="1" />
-      <File FileName="DecStr.cs" />
-      <File FileName="CompIdStrat.cs" Line="93" Column="1" />
-      <File FileName="EncrStr.cs" Line="1" Column="1" />
+      <File FileName="DecStr.cs" Line="86" Column="17" IsPinned="True" />
+      <File FileName="CriptoKeyMgr.cs" Line="141" Column="9" IsPinned="True" />
+      <File FileName="ConfigMgr.cs" Line="37" Column="1" />
+      <File FileName="FileMgr.cs" Line="12" Column="64" />
+      <File FileName="CriptoFilMgr.cs" Line="50" Column="1" />
+      <File FileName="CompIdStrat.cs" Line="55" Column="34" />
+      <File FileName="EncrStr.cs" Line="123" Column="26" />
+      <File FileName="Program.cs" Line="29" Column="1" />
+      <File FileName="Comn.cs" Line="115" Column="1" />
+      <File FileName="RansomMessage.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="s0s_L-ckr" expanded="True">
             <Node name="s0s_L-ckr" expanded="True">
-              <Node name="EncrStr.cs" selected="True" />
+              <Node name="RansomMessage.cs" selected="True" />
             </Node>
           </Node>
         </State>

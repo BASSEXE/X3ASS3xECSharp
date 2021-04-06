@@ -11,11 +11,9 @@ namespace s0s_L_ckr
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void ReadFil(FileInfo file, ref Byte[] fileDat)
         {
-            using (FileStream fileStream = File.OpenRead(file.FullName))
-            {
-                fileDat = new byte[fileStream.Length];
-                fileStream.Read(fileDat, 0, fileDat.Length);
-            }
+            using FileStream fileStream = File.OpenRead(file.FullName);
+            fileDat = new byte[fileStream.Length];
+            fileStream.Read(fileDat, 0, fileDat.Length);
         }
     }
 }

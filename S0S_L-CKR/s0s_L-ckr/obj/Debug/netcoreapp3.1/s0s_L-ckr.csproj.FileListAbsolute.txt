@@ -13,7 +13,6 @@
 /Users/t0ge/Documents/GitHub/X3ASS3xECSharp/S0S_L-CKR/s0s_L-ckr/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll
 /Users/t0ge/Documents/GitHub/X3ASS3xECSharp/S0S_L-CKR/s0s_L-ckr/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.dll
 /Users/t0ge/Documents/GitHub/X3ASS3xECSharp/S0S_L-CKR/s0s_L-ckr/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.dll
-/Users/t0ge/Documents/GitHub/X3ASS3xECSharp/S0S_L-CKR/s0s_L-ckr/obj/Debug/netcoreapp3.1/s0s_L-ckr.csprojAssemblyReference.cache
 /Users/t0ge/Documents/GitHub/X3ASS3xECSharp/S0S_L-CKR/s0s_L-ckr/obj/Debug/netcoreapp3.1/s0s_L-ckr.AssemblyInfoInputs.cache
 /Users/t0ge/Documents/GitHub/X3ASS3xECSharp/S0S_L-CKR/s0s_L-ckr/obj/Debug/netcoreapp3.1/s0s_L-ckr.AssemblyInfo.cs
 /Users/t0ge/Documents/GitHub/X3ASS3xECSharp/S0S_L-CKR/s0s_L-ckr/obj/Debug/netcoreapp3.1/s0s_L-ckr.csproj.CoreCompileInputs.cache

