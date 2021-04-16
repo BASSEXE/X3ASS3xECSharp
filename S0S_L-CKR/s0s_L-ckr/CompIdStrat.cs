@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Management;
 using System.Security.Cryptography;
@@ -85,7 +86,9 @@ namespace s0s_L_ckr
             return result;
 
         }*/
+
+        }
     }
-}
+
 
 

