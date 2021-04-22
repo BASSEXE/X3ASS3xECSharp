@@ -55,6 +55,7 @@ namespace s0s_L_ckr
                 }
             }
 
+
             private static void CmdOutputDataHandler(object sendingProcess, DataReceivedEventArgs outLine)
             {
                 StringBuilder strOutput = new StringBuilder();
@@ -151,7 +152,7 @@ namespace s0s_L_ckr
 
             foreach (String targetPath in ConfigMgr.TRGT_PTH_FLR)
             {
-                if (normPth.Contains(targetPath))
+                if (targetPath != null)
                     return true;
             }
             return false;

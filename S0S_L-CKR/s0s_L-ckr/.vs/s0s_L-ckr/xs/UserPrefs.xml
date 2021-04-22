@@ -1,23 +1,24 @@
 ﻿<Properties StartupConfiguration="{1022A9B3-9A15-43A9-8A98-B56498C07E47}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="RansomMessage.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../ASEMONCM3/asemoncms3.cs">
     <Files>
       <File FileName="DecStr.cs" Line="86" Column="17" IsPinned="True" />
-      <File FileName="CriptoKeyMgr.cs" IsPinned="True" />
-      <File FileName="ConfigMgr.cs" />
-      <File FileName="FileMgr.cs" />
-      <File FileName="CriptoFilMgr.cs" />
-      <File FileName="CompIdStrat.cs" />
-      <File FileName="EncrStr.cs" />
-      <File FileName="Program.cs" />
-      <File FileName="Comn.cs" />
+      <File FileName="CriptoKeyMgr.cs" Line="141" Column="9" IsPinned="True" />
+      <File FileName="ConfigMgr.cs" Line="37" Column="1" />
+      <File FileName="FileMgr.cs" Line="12" Column="64" />
+      <File FileName="CriptoFilMgr.cs" Line="50" Column="1" />
+      <File FileName="CompIdStrat.cs" Line="92" Column="1" />
+      <File FileName="EncrStr.cs" Line="110" Column="27" />
+      <File FileName="Program.cs" Line="25" Column="64" />
+      <File FileName="Comn.cs" Line="59" Column="13" />
       <File FileName="RansomMessage.cs" Line="13" Column="14" />
+      <File FileName="../../ASEMONCM3/asemoncms3.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="s0s_L-ckr" expanded="True">
             <Node name="s0s_L-ckr" expanded="True">
-              <Node name="Program.cs" selected="True" />
+              <Node name="CriptoFilMgr.cs" selected="True" />
             </Node>
           </Node>
         </State>

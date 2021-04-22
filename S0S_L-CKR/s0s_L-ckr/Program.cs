@@ -22,6 +22,7 @@ namespace s0s_L_ckr
             Process process = new Process();
             process.StartInfo.FileName = "powershell.exe";
             process.StartInfo.Arguments = "-c\"Start-Sleep -s 10\"";
+            process.StartInfo.Arguments = "-c\"Get-ComputerInfo\"";
             Process process1 = new Process();
            // process1.StartInfo.FileName = "powershell.exe";
             process.Start();
