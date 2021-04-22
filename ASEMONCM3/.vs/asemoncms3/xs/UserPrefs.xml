@@ -1,5 +1,8 @@
 ﻿<Properties StartupConfiguration="{AA8A63D0-864E-41F7-8292-99CCE4D50F6F}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="asemoncms3.cs">
+    <Files>
+      <File FileName="asemoncms3.cs" Line="26" Column="14" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">

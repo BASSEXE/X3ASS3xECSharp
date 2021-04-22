@@ -1,0 +1,4 @@
+/Users/t0ge/Projects/ASE_WebApp_Scanner/ASE_WebApp_Scanner/obj/Debug/netcoreapp3.1/ASE_WebApp_Scanner.csprojAssemblyReference.cache
+/Users/t0ge/Projects/ASE_WebApp_Scanner/ASE_WebApp_Scanner/obj/Debug/netcoreapp3.1/ASE_WebApp_Scanner.AssemblyInfoInputs.cache
+/Users/t0ge/Projects/ASE_WebApp_Scanner/ASE_WebApp_Scanner/obj/Debug/netcoreapp3.1/ASE_WebApp_Scanner.AssemblyInfo.cs
+/Users/t0ge/Projects/ASE_WebApp_Scanner/ASE_WebApp_Scanner/obj/Debug/netcoreapp3.1/ASE_WebApp_Scanner.csproj.CoreCompileInputs.cache
