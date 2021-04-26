@@ -132,9 +132,9 @@ Distributed under the MIT License.See `LICENSE` for more information.
 <!--CONTACT-->
 ## Contact
 
-Your Name - [@@That0neguy3ly ](https://twitter.com/@That0neguy3ly ) - email
+Your Name - [@That0neguy3ly ](https://twitter.com/@That0neguy3ly ) - email
 
-Project Link: [https://github.com/X3ASS3xE/ASEMONCM3](https://github.com/X3ASS3xE/ASEMONCM3)
+Project Link: [https://github.com/X3ASS3xE/ASEMONCM3](https://github.com/X3ASS3xE/X3ASS3xECSharp)
 
 
 
