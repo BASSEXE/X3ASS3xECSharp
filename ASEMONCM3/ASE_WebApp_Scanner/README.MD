@@ -89,7 +89,6 @@
 
 
 Here's a blank template to get started:
-* *To avoid retyping too much info.Do a search and replace with your text editor for the following:**
 `X3ASS3xE`, `ASEMONCM3`, `@That0neguy3ly `, `email`, `ASE_WebApp_Scanner`, `Primitive web scanner than scans for XSS and SQLI in request parameters.`
 
 
