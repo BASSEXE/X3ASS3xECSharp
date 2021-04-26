@@ -32,7 +32,7 @@
 <br />
 <p align = "center">
 
-<a href = "https://github.com/X3ASS3xE/ASEMONCM3">
+<a href = "https://github.com/X3ASS3xE/X3ASS3xECSharp">
 
   <img src = "https://danbooru.donmai.us/data/original/0b/c5/0bc5119e2bb7a3db5ba8816727e0348f.jpg" alt = "Logo" width = "200" height = "200">
 
@@ -46,19 +46,12 @@
   Primitive web scanner than scans for XSS and SQLI in request parameters.
   <br />
 
-  <a href = "https://github.com/X3ASS3xE/ASEMONCM3"><strong> Explore the docs »</strong></a>
+  <a href = "https://github.com/X3ASS3xE/X3ASS3xECSharp"><strong> Explore the docs »</strong></a>
 
   <br />
 
   <br />
 
-  <a href = "https://github.com/X3ASS3xE/ASEMONCM3"> View Demo </a>
-    ·
-
-  <a href = "https://github.com/X3ASS3xE/ASEMONCM3/issues"> Report Bug </a>
-    ·
-
-  <a href = "https://github.com/X3ASS3xE/ASEMONCM3/issues"> Request Feature </a>
 
 </p>
 </p>
@@ -101,7 +94,6 @@ Here's a blank template to get started:
 Use this space to show useful examples of how a project can be used.Additional screenshots, code examples and demos work well in this space.You may also link to more resources.
 
 
-_For more examples, please refer to the[Documentation](https://example.com)_
 
 
 
@@ -109,7 +101,7 @@ _For more examples, please refer to the[Documentation](https://example.com)_
 <!--ROADMAP-->
 ## Roadmap
 
-See the[open issues](https://github.com/X3ASS3xE/ASEMONCM3/issues) for a list of proposed features (and known issues).
+See the[open issues](https://github.com/X3ASS3xE/X3ASS3xECSharp/issues) for a list of proposed features (and known issues).
 
 
 
