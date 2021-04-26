@@ -13,7 +13,7 @@
 
 
 
-<!--PROJECT SHIELDS-- >
+<!--PROJECT SHIELDS-->
 <!--
 ***I'm using markdown "reference style" links for readability.
 * **Reference links are enclosed in brackets[ ] instead of parentheses().
@@ -31,7 +31,7 @@
 
 
 <!--PROJECT LOGO-->
-<br/>
+<br />
 <p align = "center">
 
 <a href = "https://github.com/X3ASS3xE/ASEMONCM3">
@@ -46,32 +46,32 @@
 
 <p align = "center">
   Primitive web scanner than scans for XSS and SQLI in request parameters.
-  <br/>
+  <br />
 
-  <a href = "https://github.com/X3ASS3xE/ASEMONCM3"><strong> Explore the docs »</ strong></ a>
+  <a href = "https://github.com/X3ASS3xE/ASEMONCM3"><strong> Explore the docs »</strong></a>
 
-  < br />
+  <br />
 
-  < br />
+  <br />
 
-  < a href = "https://github.com/X3ASS3xE/ASEMONCM3" > View Demo </ a >
+  <a href = "https://github.com/X3ASS3xE/ASEMONCM3"> View Demo </a>
     ·
 
-  < a href = "https://github.com/X3ASS3xE/ASEMONCM3/issues" > Report Bug </ a >
+  <a href = "https://github.com/X3ASS3xE/ASEMONCM3/issues"> Report Bug </a>
     ·
 
-  < a href = "https://github.com/X3ASS3xE/ASEMONCM3/issues" > Request Feature </ a >
+  <a href = "https://github.com/X3ASS3xE/ASEMONCM3/issues"> Request Feature </a>
 
-</ p >
-</ p >
-
-
+</p>
+</p>
 
 
-< !--TABLE OF CONTENTS-- >
-< details open = "open" >
 
-< summary >< h2 style = "display: inline-block" > Table of Contents </ h2 ></ summary >
+
+<!--TABLE OF CONTENTS-->
+<details open = "open">
+
+<summary><h2 style = "display: inline-block"> Table of Contents </h2></summary>
 
 < ol >
 
