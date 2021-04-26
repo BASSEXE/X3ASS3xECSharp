@@ -62,7 +62,7 @@ namespace asemoncms3
 
             if (sqliResult.Contains("No parameters were found to be vulnerable to SQLI attempts"))
             {
-                Console.WriteLine("Application does not seem to be vulnerable to XSS injection in parametrs given.\n" +
+                Console.WriteLine("Application does not seem to be vulnerable to SQL injection in parametrs given.\n" +
                     "Would you like to try a different url?(Y for yes N for No)");
                 string tryNewUrl = Console.ReadLine();
                 tryNewUrl.ToUpper();
@@ -80,6 +80,22 @@ namespace asemoncms3
             }
 
             SqlinjectionAttempt(url, sqliVunParameters);
+
+            Console.WriteLine("\n" +
+                    "Would you like to try a different url?(Y for yes N for No)");
+            string newUrl = Console.ReadLine();
+
+            if (newUrl.Contains('Y'))
+            {
+                Console.WriteLine("input new url...");
+                url = Console.ReadLine();
+                goto Start;
+            }
+            else
+            {
+                Console.WriteLine("Goodbye...");
+                System.Environment.Exit(0);
+            }
 
             Console.WriteLine("Goodbye...");
             System.Environment.Exit(0);

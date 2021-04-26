@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "ASE_WebApp_Scanner/1.0.0": {
+        "runtime": {
+          "ASE_WebApp_Scanner.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ASE_WebApp_Scanner/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
