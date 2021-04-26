@@ -34,21 +34,21 @@
 <br/>
 <p align = "center">
 
-< a href = "https://github.com/X3ASS3xE/ASEMONCM3" >
+<a href = "https://github.com/X3ASS3xE/ASEMONCM3">
 
-  < img src = "images/logo.png" alt = "Logo" width = "80" height = "80" >
+  <img src = "images/logo.png" alt = "Logo" width = "80" height = "80">
 
-</ a >
-
-
-< h3 align = "center" > ASE_WebApp_Scanner </ h3 >
+</a>
 
 
-< p align = "center" >
+<h3 align = "center" > ASE_WebApp_Scanner </ h3>
+
+
+<p align = "center">
   Primitive web scanner than scans for XSS and SQLI in request parameters.
-  < br />
+  <br/>
 
-  < a href = "https://github.com/X3ASS3xE/ASEMONCM3" >< strong > Explore the docs »</ strong ></ a >
+  <a href = "https://github.com/X3ASS3xE/ASEMONCM3"><strong> Explore the docs »</ strong></ a>
 
   < br />
 
