@@ -6,7 +6,7 @@
 * **
 ***
 ***
-***X3ASS3xE, ASEMONCM3, @That0neguy3ly , email, ASE_WebApp_Scanner, Primitive web scanner than scans for XSS and SQLI in request parameters.
+***BASSEXE, ASEMONCM3, @That0neguy3ly , email, ASE_WebApp_Scanner, Primitive web scanner than scans for XSS and SQLI in request parameters.
 -->
 
 
@@ -32,7 +32,7 @@
 <br />
 <p align = "center">
 
-<a href = "https://github.com/X3ASS3xE/X3ASS3xECSharp">
+<a href = "https://github.com/BASSEXE/X3ASS3xECSharp">
 
   <img src = "https://danbooru.donmai.us/data/original/0b/c5/0bc5119e2bb7a3db5ba8816727e0348f.jpg" alt = "Logo" width = "200" height = "200">
 
@@ -46,7 +46,7 @@
   Primitive web scanner than scans for XSS and SQLI in request parameters.
   <br />
 
-  <a href = "https://github.com/X3ASS3xE/X3ASS3xECSharp"><strong> Explore the docs »</strong></a>
+  <a href = "https://github.com/BASSEXE/X3ASS3xECSharp"><strong> Explore the docs »</strong></a>
 
   <br />
 
@@ -82,7 +82,7 @@
 
 
 Here's a blank template to get started:
-`X3ASS3xE`, `ASEMONCM3`, `@That0neguy3ly `, `email`, `ASE_WebApp_Scanner`, `Primitive web scanner than scans for XSS and SQLI in request parameters.`
+`BASSEXE`, `ASEMONCM3`, `@That0neguy3ly `, `email`, `ASE_WebApp_Scanner`, `Primitive web scanner than scans for XSS and SQLI in request parameters.`
 
 
 
@@ -101,7 +101,7 @@ Use this space to show useful examples of how a project can be used.Additional s
 <!--ROADMAP-->
 ## Roadmap
 
-See the[open issues](https://github.com/X3ASS3xE/X3ASS3xECSharp/issues) for a list of proposed features (and known issues).
+See the[open issues](https://github.com/BASSEXE/X3ASS3xECSharp/issues) for a list of proposed features (and known issues).
 
 
 
@@ -126,7 +126,7 @@ Distributed under the MIT License.See `LICENSE` for more information.
 
 Your Name - [@That0neguy3ly ](https://twitter.com/@That0neguy3ly ) - email
 
-Project Link: [https://github.com/X3ASS3xE/ASEMONCM3](https://github.com/X3ASS3xE/X3ASS3xECSharp)
+Project Link: [https://github.com/X3ASS3xE/ASEMONCM3](https://github.com/BASSEXE/X3ASS3xECSharp)
 
 
 
@@ -145,14 +145,14 @@ Project Link: [https://github.com/X3ASS3xE/ASEMONCM3](https://github.com/X3ASS3x
 <!--MARKDOWN LINKS & IMAGES-->
 <!--https://www.markdownguide.org/basic-syntax/#reference-style-links-->
 [contributors-shield]: https://img.shields.io/github/contributors/X3ASS3xE/repo.svg?style=for-the-badge
-[contributors-url]: https://github.com/X3ASS3xE/repo/graphs/contributors
+[contributors-url]: https://github.com/BASSEXE/repo/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/X3ASS3xE/repo.svg?style=for-the-badge
-[forks-url]: https://github.com/X3ASS3xE/repo/network/members
+[forks-url]: https://github.com/BASSEXE/repo/network/members
 [stars-shield]: https://img.shields.io/github/stars/X3ASS3xE/repo.svg?style=for-the-badge
-[stars-url]: https://github.com/X3ASS3xE/repo/stargazers
+[stars-url]: https://github.com/BASSEXE/repo/stargazers
 [issues-shield]: https://img.shields.io/github/issues/X3ASS3xE/repo.svg?style=for-the-badge
-[issues-url]: https://github.com/X3ASS3xE/repo/issues
-[license-shield]: https://img.shields.io/github/license/X3ASS3xE/repo.svg?style=for-the-badge
-[license-url]: https://github.com/X3ASS3xE/repo/blob/master/LICENSE.txt
+[issues-url]: https://github.com/BASSEXE/repo/issues
+[license-shield]: https://img.shields.io/github/license/BASSEXE/repo.svg?style=for-the-badge
+[license-url]: https://github.com/BASSEXE/repo/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/X3ASS3xE
+[linkedin-url]: https://linkedin.com/in/BASSEXE
