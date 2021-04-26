@@ -160,8 +160,8 @@ Project Link: [https://github.com/X3ASS3xE/ASEMONCM3](https://github.com/X3ASS3x
 
 
 
-< !--MARKDOWN LINKS & IMAGES-- >
-< !--https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+<!--MARKDOWN LINKS & IMAGES-->
+<!--https://www.markdownguide.org/basic-syntax/#reference-style-links-->
 [contributors - shield]: https://img.shields.io/github/contributors/X3ASS3xE/repo.svg?style=for-the-badge
 [contributors - url]: https://github.com/X3ASS3xE/repo/graphs/contributors
 [forks - shield]: https://img.shields.io/github/forks/X3ASS3xE/repo.svg?style=for-the-badge
