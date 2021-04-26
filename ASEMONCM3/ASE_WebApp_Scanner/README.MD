@@ -35,7 +35,7 @@
 
 <a href = "https://github.com/X3ASS3xE/ASEMONCM3">
 
-  <img src = "images/logo.png" alt = "Logo" width = "80" height = "80">
+  <img src = "https://danbooru.donmai.us/data/original/0b/c5/0bc5119e2bb7a3db5ba8816727e0348f.jpg" alt = "Logo" width = "80" height = "80">
 
 </a>
 
