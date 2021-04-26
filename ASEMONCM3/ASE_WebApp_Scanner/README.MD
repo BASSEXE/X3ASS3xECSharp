@@ -6,7 +6,6 @@
 * **
 ***
 ***
-***To avoid retyping too much info.Do a search and replace for the following:
 ***X3ASS3xE, ASEMONCM3, @That0neguy3ly , email, ASE_WebApp_Scanner, Primitive web scanner than scans for XSS and SQLI in request parameters.
 -->
 
