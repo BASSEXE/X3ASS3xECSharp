@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/t0ge/Documents/GitHub/X3ASS3xECSharp/S0S_L-CKR/s0s_L-ckr/s0s_L-ckr.csproj": {}
+    "/Users/t0ge/Documents/GitHub/X3ASS3xECSharp/S0S_L-CKR/s0s_L-ckr.csproj": {}
   },
   "projects": {
-    "/Users/t0ge/Documents/GitHub/X3ASS3xECSharp/S0S_L-CKR/s0s_L-ckr/s0s_L-ckr.csproj": {
+    "/Users/t0ge/Documents/GitHub/X3ASS3xECSharp/S0S_L-CKR/s0s_L-ckr.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/t0ge/Documents/GitHub/X3ASS3xECSharp/S0S_L-CKR/s0s_L-ckr/s0s_L-ckr.csproj",
+        "projectUniqueName": "/Users/t0ge/Documents/GitHub/X3ASS3xECSharp/S0S_L-CKR/s0s_L-ckr.csproj",
         "projectName": "s0s_L-ckr",
-        "projectPath": "/Users/t0ge/Documents/GitHub/X3ASS3xECSharp/S0S_L-CKR/s0s_L-ckr/s0s_L-ckr.csproj",
+        "projectPath": "/Users/t0ge/Documents/GitHub/X3ASS3xECSharp/S0S_L-CKR/s0s_L-ckr.csproj",
         "packagesPath": "/Users/t0ge/.nuget/packages/",
-        "outputPath": "/Users/t0ge/Documents/GitHub/X3ASS3xECSharp/S0S_L-CKR/s0s_L-ckr/obj/",
+        "outputPath": "/Users/t0ge/Documents/GitHub/X3ASS3xECSharp/S0S_L-CKR/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/t0ge/.config/NuGet/NuGet.Config"

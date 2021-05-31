@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WUGaF9UzE2mqTpoloh4MIcpy7djpbnkRFyyzhBzkJMIHyejZMJSZQWxE0Na7RzOWv3jv17kbwHadtdr1/lchlg==",
+  "dgSpecHash": "AQP6GjjI2NscleXz54OX5tRvuntTsbRHv7ciXTYU1C8s+6a5DkyyT6N6Urch2UO5zg3s2nGnWxP2qcX7epbrDA==",
   "success": true,
-  "projectFilePath": "/Users/t0ge/Documents/GitHub/X3ASS3xECSharp/S0S_L-CKR/s0s_L-ckr/s0s_L-ckr.csproj",
+  "projectFilePath": "/Users/t0ge/Documents/GitHub/X3ASS3xECSharp/S0S_L-CKR/s0s_L-ckr.csproj",
   "expectedPackageFiles": [
     "/Users/t0ge/.nuget/packages/microsoft.netcore.platforms/5.0.0/microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "/Users/t0ge/.nuget/packages/microsoft.win32.registry/5.0.0/microsoft.win32.registry.5.0.0.nupkg.sha512",
