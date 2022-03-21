@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "AQP6GjjI2NscleXz54OX5tRvuntTsbRHv7ciXTYU1C8s+6a5DkyyT6N6Urch2UO5zg3s2nGnWxP2qcX7epbrDA==",
+  "success": true,
+  "projectFilePath": "/Users/t0ge/Documents/GitHub/X3ASS3xECSharp/S0S_L-CKR/s0s_L-ckr.csproj",
+  "expectedPackageFiles": [
+    "/Users/t0ge/.nuget/packages/microsoft.netcore.platforms/5.0.0/microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "/Users/t0ge/.nuget/packages/microsoft.win32.registry/5.0.0/microsoft.win32.registry.5.0.0.nupkg.sha512",
+    "/Users/t0ge/.nuget/packages/system.codedom/5.0.0/system.codedom.5.0.0.nupkg.sha512",
+    "/Users/t0ge/.nuget/packages/system.management/5.0.0/system.management.5.0.0.nupkg.sha512",
+    "/Users/t0ge/.nuget/packages/system.security.accesscontrol/5.0.0/system.security.accesscontrol.5.0.0.nupkg.sha512",
+    "/Users/t0ge/.nuget/packages/system.security.principal.windows/5.0.0/system.security.principal.windows.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

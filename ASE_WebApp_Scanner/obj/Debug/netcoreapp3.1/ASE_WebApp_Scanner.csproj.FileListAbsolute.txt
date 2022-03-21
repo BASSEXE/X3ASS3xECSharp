@@ -1,0 +1,12 @@
+/Users/t0ge/Projects/ASE_WebApp_Scanner/ASE_WebApp_Scanner/obj/Debug/netcoreapp3.1/ASE_WebApp_Scanner.csprojAssemblyReference.cache
+/Users/t0ge/Projects/ASE_WebApp_Scanner/ASE_WebApp_Scanner/obj/Debug/netcoreapp3.1/ASE_WebApp_Scanner.AssemblyInfoInputs.cache
+/Users/t0ge/Projects/ASE_WebApp_Scanner/ASE_WebApp_Scanner/obj/Debug/netcoreapp3.1/ASE_WebApp_Scanner.AssemblyInfo.cs
+/Users/t0ge/Projects/ASE_WebApp_Scanner/ASE_WebApp_Scanner/obj/Debug/netcoreapp3.1/ASE_WebApp_Scanner.csproj.CoreCompileInputs.cache
+/Users/t0ge/Projects/ASE_WebApp_Scanner/ASE_WebApp_Scanner/bin/Debug/netcoreapp3.1/ASE_WebApp_Scanner.deps.json
+/Users/t0ge/Projects/ASE_WebApp_Scanner/ASE_WebApp_Scanner/bin/Debug/netcoreapp3.1/ASE_WebApp_Scanner.runtimeconfig.json
+/Users/t0ge/Projects/ASE_WebApp_Scanner/ASE_WebApp_Scanner/bin/Debug/netcoreapp3.1/ASE_WebApp_Scanner.runtimeconfig.dev.json
+/Users/t0ge/Projects/ASE_WebApp_Scanner/ASE_WebApp_Scanner/bin/Debug/netcoreapp3.1/ASE_WebApp_Scanner.dll
+/Users/t0ge/Projects/ASE_WebApp_Scanner/ASE_WebApp_Scanner/bin/Debug/netcoreapp3.1/ASE_WebApp_Scanner.pdb
+/Users/t0ge/Projects/ASE_WebApp_Scanner/ASE_WebApp_Scanner/obj/Debug/netcoreapp3.1/ASE_WebApp_Scanner.dll
+/Users/t0ge/Projects/ASE_WebApp_Scanner/ASE_WebApp_Scanner/obj/Debug/netcoreapp3.1/ASE_WebApp_Scanner.pdb
+/Users/t0ge/Projects/ASE_WebApp_Scanner/ASE_WebApp_Scanner/obj/Debug/netcoreapp3.1/ASE_WebApp_Scanner.genruntimeconfig.cache
