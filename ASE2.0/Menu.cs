@@ -67,17 +67,15 @@ namespace ASE2._0
             }
 
             return menuResponse;
-            void DisplayHelp()
-            {
-                Console.WriteLine(@"
+            void DisplayHelp() => Console.WriteLine(@"
 -----------------------------
 |Choose an Option from Below:
 ----------------------------
 |1.|- Test for url for XSS Injection |
 |2.|- Test for url for SQL Injection |
 |3.|- Enumerate subdirectories. |
-|4.|- Send NULL Byte Injection. |");
-            }
+|4.|- Send NULL Byte Injection. |
+|5.|- Quit application |");
 
         }
     }
