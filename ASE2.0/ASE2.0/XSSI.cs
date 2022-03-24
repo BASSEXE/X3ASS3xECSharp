@@ -37,7 +37,7 @@ namespace ASE2._0
                     string[] vulnParms = new string[i];
 
 
-                    var xssi = url.Replace(x, x + "BASS<xss>EXE");
+                    var xssi = url.Replace(x, x + "BASS<script>alert(1)</script>EXE");
                     Console.WriteLine($"Testing {xssi} for XSS Vulnerability");
                     try
                     {
@@ -62,6 +62,10 @@ namespace ASE2._0
                                 if (response != null)
                                 {
                                     Console.WriteLine("HTTP Status Code: " + (int)response.StatusCode);
+                                    if ((int)response.StatusCode == 404)
+                                    {
+                                        Console.WriteLine((string)ex.Message);
+                                    }
                                 }
                                 else
                                 {
@@ -108,35 +112,43 @@ namespace ASE2._0
 
 
             }
-            static string IsHTTP(string url2Test)
+        }
+
+        private static string IsHTTP(string url2Test)
+        {
+            if (!url2Test.Contains("?"))
             {
-                string httpURL = url2Test;
-                Regex httpRegex = new("(http:\\/\\/(www)?\\w.*)|(https:\\/\\/(www)?\\w.*)");
-                MatchCollection matchCollection = httpRegex.Matches(httpURL);
-                if (httpRegex.IsMatch(httpURL))
+                const string testparamter = "/?id=foo";
+                Console.WriteLine("Parameter was not supplied in URL Adding parameters to test");
+                url2Test += testparamter;
+                Console.WriteLine($" New URL Submission is: {url2Test}");
+            }
+            string httpURL = url2Test;
+            Regex httpRegex = new("(http:\\/\\/(www)?\\w.*)|(https:\\/\\/(www)?\\w.*)");
+            MatchCollection matchCollection = httpRegex.Matches(httpURL);
+            if (httpRegex.IsMatch(httpURL))
+            {
+                Console.WriteLine(httpURL);
+                return httpURL;
+            }
+            else
+            {
+                Console.WriteLine("{0} matches found in: URL Submission\n URL Submitted was not in HTTP/HTTPS format",
+                         matchCollection.Count
+                         );
+                if (matchCollection.Count == 0)
                 {
-                    Console.WriteLine(httpURL);
+                    string httpURL2 = default;
+                    Console.WriteLine("Missing protocol \n Adding https:// to url");
+                    httpURL2 = "https://" + httpURL;
+                    httpURL = httpURL2;
                     return httpURL;
                 }
-                else
-                {
-                    Console.WriteLine("{0} matches found in: URL Submission\n URL Submitted was not in HTTP/HTTPS format",
-                             matchCollection.Count
-                             );
-                    if (matchCollection.Count == 0)
-                    {
-                        string httpURL2 = default;
-                        Console.WriteLine("Missing protocol \n Adding https:// to url");
-                        httpURL2 = "https://" + httpURL;
-                        httpURL = httpURL2;
-                        return httpURL;
-                    }
-                    string mC = matchCollection.ToString();
-                    Console.WriteLine(mC);
-                    return mC;
-                }
-
+                string mC = matchCollection.ToString();
+                Console.WriteLine(mC);
+                return mC;
             }
+
         }
     }
 }

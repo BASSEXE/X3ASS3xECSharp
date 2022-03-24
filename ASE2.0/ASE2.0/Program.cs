@@ -29,6 +29,15 @@ namespace ASE2._0
                 case "2":
                     SQLI sQLI = new();
                     break;
+                case "3":
+                    Console.WriteLine("Still in development");
+                    break;
+                case "4":
+                    NullByteInjection nullByteI = new();
+                    break;
+                case "5":
+                    CustomQuery custom = new();
+                    break;
             }
             goto Start;
             //Console.WriteLine("Supply the URL to test.../n URL should be in <url>.com?param=&param2...format");

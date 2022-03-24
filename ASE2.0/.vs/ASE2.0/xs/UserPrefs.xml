@@ -1,0 +1,19 @@
+﻿<Properties StartupConfiguration="{C6CED5E9-06AB-4E69-BCBA-EF70F624752A}|Default">
+  <MonoDevelop.Ide.ItemProperties.ASE2.0 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ASE2.0/NullByteInjection.cs">
+    <Files>
+      <File FileName="ASE2.0/Menu.cs" Line="8" Column="13" />
+      <File FileName="ASE2.0/Program.cs" />
+      <File FileName="ASE2.0/XSSI.cs" />
+      <File FileName="ASE2.0/SQLI.cs" />
+      <File FileName="ASE2.0/NullByteInjection.cs" Line="31" Column="44" />
+      <File FileName="ASE2.0/CustomQuery.cs" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
